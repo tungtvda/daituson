@@ -4,12 +4,12 @@
  * @author vdbkpro
  * @copyright 2013
  */
-define("SITE_NAME", "http://localhost/adsmob");
+define("SITE_NAME", "http://localhost/daituson");
 define("DIR", dirname(__FILE__));
 define('SERVER','localhost');
 define('DB_USERNAME','root');
 define('DB_PASSWORD','');
-define('DB_NAME','adsmob');
+define('DB_NAME','daituson');
 define('CACHE',false);
 define('DATETIME_FORMAT',"y-m-d H:i:s");
 define('PRIVATE_KEY','hoidinhnvbk');
