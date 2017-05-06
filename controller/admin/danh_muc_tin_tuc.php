@@ -3,6 +3,7 @@ require_once '../../config.php';
 require_once DIR.'/model/danh_muc_tin_tucService.php';
 require_once DIR.'/view/admin/danh_muc_tin_tuc.php';
 require_once DIR.'/common/messenger.php';
+require_once DIR.'/common/locdautiengviet.php';
 $data=array();
 $insert=true;
 if(isset($_SESSION["Admin"]))
@@ -62,7 +63,8 @@ if(isset($_SESSION["Admin"]))
        if(!isset($array['name']))
        $array['name']='0';
        if(!isset($array['name_url']))
-       $array['name_url']='0';
+           $array['name_url']='0';
+        $array['name_url']=LocDau($array['name']);
        if(!isset($array['vi_tri']))
        $array['vi_tri']='0';
        if(!isset($array['title']))
