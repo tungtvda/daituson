@@ -1,0 +1,60 @@
+<?php
+class config
+{
+    public $Id,$banner,$icon,$name,$dien_thoai,$fax,$email,$tru_so,$giay_phep,$trach_nhiem_chinh,$trach_nhiem_noi_dung,$gioi_thieu,$title,$keyword,$description;
+    public function config($data=array())
+    {
+    $this->Id=isset($data['Id'])?$data['Id']:'';
+    $this->banner=isset($data['banner'])?$data['banner']:'';
+    $this->icon=isset($data['icon'])?$data['icon']:'';
+    $this->name=isset($data['name'])?$data['name']:'';
+    $this->dien_thoai=isset($data['dien_thoai'])?$data['dien_thoai']:'';
+    $this->fax=isset($data['fax'])?$data['fax']:'';
+    $this->email=isset($data['email'])?$data['email']:'';
+    $this->tru_so=isset($data['tru_so'])?$data['tru_so']:'';
+    $this->giay_phep=isset($data['giay_phep'])?$data['giay_phep']:'';
+    $this->trach_nhiem_chinh=isset($data['trach_nhiem_chinh'])?$data['trach_nhiem_chinh']:'';
+    $this->trach_nhiem_noi_dung=isset($data['trach_nhiem_noi_dung'])?$data['trach_nhiem_noi_dung']:'';
+    $this->gioi_thieu=isset($data['gioi_thieu'])?$data['gioi_thieu']:'';
+    $this->title=isset($data['title'])?$data['title']:'';
+    $this->keyword=isset($data['keyword'])?$data['keyword']:'';
+    $this->description=isset($data['description'])?$data['description']:'';
+          $this->encode();
+    }
+    public function encode()
+        {
+            $this->Id=addslashes($this->Id);
+            $this->banner=addslashes($this->banner);
+            $this->icon=addslashes($this->icon);
+            $this->name=addslashes($this->name);
+            $this->dien_thoai=addslashes($this->dien_thoai);
+            $this->fax=addslashes($this->fax);
+            $this->email=addslashes($this->email);
+            $this->tru_so=addslashes($this->tru_so);
+            $this->giay_phep=addslashes($this->giay_phep);
+            $this->trach_nhiem_chinh=addslashes($this->trach_nhiem_chinh);
+            $this->trach_nhiem_noi_dung=addslashes($this->trach_nhiem_noi_dung);
+            $this->gioi_thieu=addslashes($this->gioi_thieu);
+            $this->title=addslashes($this->title);
+            $this->keyword=addslashes($this->keyword);
+            $this->description=addslashes($this->description);
+        }
+    public function decode()
+        {
+            $this->Id=stripslashes($this->Id);
+            $this->banner=stripslashes($this->banner);
+            $this->icon=stripslashes($this->icon);
+            $this->name=stripslashes($this->name);
+            $this->dien_thoai=stripslashes($this->dien_thoai);
+            $this->fax=stripslashes($this->fax);
+            $this->email=stripslashes($this->email);
+            $this->tru_so=stripslashes($this->tru_so);
+            $this->giay_phep=stripslashes($this->giay_phep);
+            $this->trach_nhiem_chinh=stripslashes($this->trach_nhiem_chinh);
+            $this->trach_nhiem_noi_dung=stripslashes($this->trach_nhiem_noi_dung);
+            $this->gioi_thieu=stripslashes($this->gioi_thieu);
+            $this->title=stripslashes($this->title);
+            $this->keyword=stripslashes($this->keyword);
+            $this->description=stripslashes($this->description);
+        }
+}
