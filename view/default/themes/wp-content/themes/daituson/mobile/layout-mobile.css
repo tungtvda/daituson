@@ -1,0 +1,731 @@
+@font-face{
+    font-family:'FontAwesome';src:url('fonts/fontawesome-webfont9b1a.html?v=4.0.1');
+    src:url('fonts/fontawesome-webfontd41d.html?#iefix&v=4.0.1') format('embedded-opentype'),
+    url('fonts/fontawesome-webfont9b1a-2.html?v=4.0.1') format('woff'),
+    url('fonts/fontawesome-webfont9b1a-3.html?v=4.0.1') format('truetype'),
+    url('fonts/fontawesome-webfont9b1a-4.html?v=4.0.1#fontawesomeregular') format('svg');
+    font-weight:normal;
+    font-style:normal
+}
+body {
+    background: none repeat scroll 0 0 transparent;
+}
+
+.header_full {
+    width: 100%;
+}
+.body_full{
+    background: none repeat scroll 0 0 #C30404;
+    height: 232px;
+}
+#header {
+    width: 100%;
+    padding: 0;
+    display: none;
+}
+
+#menu_top_c ul {
+    margin-right: 0;
+    width: 100%;
+}
+#menu {
+    margin-left: 0;
+    width: 100%;
+}
+#top-navi {
+    width: 100%;
+}
+#desc_home {
+    width: 100%;
+}
+.full_wrapper {
+    width: 100%;
+    float: left;
+}div#wrapper {
+     padding: 0 1%;
+     width: 98%;
+ }
+.texthome {
+    padding: 1%;
+}
+.top_tour {
+     width: 100%;
+ }
+.top_tour ul {
+    padding: 1%;
+    width: 98%;
+}
+
+.top_tour ul li {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.top_tour ul li p.t_img img {
+    border: medium none;
+    height: auto;
+    padding: 0;
+    width: 100%;
+}
+
+.top_tour ul li p.t_desctour {
+    width: auto;
+}
+
+#content {
+    width: 100%;
+}
+
+#ct_left {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#ct_right{
+    display:none;
+}
+
+.custom_type_tour {
+    background: none repeat scroll 0 0 #f3f3f3;
+    border-radius: 5px;
+    margin-top: 8px;
+    width: 100%;
+}
+.custom_type_tour .c_tl,
+.custom_type_tour .c_tr,
+.custom_type_tour .c_bl,
+.custom_type_tour .c_br{
+    display:none;
+}
+
+.custom_type_tour h2 {
+    padding: 1%;
+    width: 98%;
+}
+.custom_type_tour ul {
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.custom_type_tour ul li {
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 4px 0 4px 18px;
+    width: 44%;
+}
+.recommanded_tours {
+    margin-top: 10px;
+}
+.left_all {
+    width: 100%;
+}
+
+.recommanded_tours .bgtour {
+    padding: 1% 0;
+    width: 100%;
+}
+
+.polt {
+    padding-right: 0;
+    width: 100%;
+}
+
+div.imgbd img {
+    float: left;
+    height: auto;
+    margin:1% 0;
+    width: 100%;
+}
+.bgtour .fright {
+    margin-top: 10px;
+    padding-right: 0;
+    text-align: center;
+    width: 100%;
+}
+.index_tour .number {
+    margin-top: 2px;
+}
+.divweb{
+    display:none;
+}
+.divmobile{
+    display: block;
+}
+.fright .ar_more {
+    background: none repeat scroll 0 0 #ac3f1d;
+    border-radius: 4px;
+    display: block;
+    margin: 10px 0 10px 2%;
+    padding: 5px 0;
+    text-align: center;
+    width: 24%;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+.left_all img{
+    max-width: 100%;
+}
+
+.recom {
+    width: 100%;
+}
+
+.footer {
+    background: none repeat scroll 0 0 #dadbf4;
+    height: auto;
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.ft_footer {
+    padding: 1%;
+    width: 98%;
+}
+
+.left_footer {
+    margin-top: 0;
+    width: 100%;
+}
+.right_footer {
+    margin-top: 0;
+    width: 100%;
+}
+.desc_cat {
+    padding: 1%;
+    width: 98% !important;
+}
+
+.private_tours .list_tours {
+    width: 100%;
+}
+
+.private_tours .cat_list_t {
+    border: medium none;
+    height: auto;
+    margin-bottom: 10px;
+    margin-right: 0;
+    width: 100%;
+}
+
+.private_tours .cat_list_t3 {
+    border: medium none;
+    float: left;
+    height: auto;
+    margin-bottom: 10px;
+    margin-right: 0;
+    width: 100%;
+}
+.private_tours .list_tours img {
+    height: auto;
+    margin: 1%;
+    width: 98%;
+}
+.private_tours .list_tours p {
+    padding: 0 1%;
+    text-align: justify;
+}
+.private_tours .cam_lao .tl1,
+.private_tours .cam_lao .tr1,
+.private_tours .cam_lao .bl1,
+.private_tours .cam_lao .br1{
+    display: none;
+}
+.title_p {
+    padding: 5px 0 5px 2%;
+    width: 98%;
+}
+.imformation_user {
+    padding: 1%;
+    width: 98%;
+}
+#user01 {
+    width: 100%;
+}
+#user01 strong {
+    width: 100%;
+}
+#user01 input {
+    width: 60% !important;
+}
+#user02 {
+    margin-left: 0;
+    width: 100%;
+}
+
+#user02 strong {
+    width: 100%;
+}
+
+#user02 select {
+    width: 60% !important;
+}
+#user02 input {
+    width: 60% !important;
+}
+.imformation_travel {
+    padding: 1%;
+    width: 98%;
+}
+.imformation_travel p {
+    width: 100%;
+}
+.imformation_travel p select{
+    width: 60% !important;
+    margin-bottom: 5px;
+}
+.imformation_travel_more p strong {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.imformation_travel textarea{
+    max-width: 60%;
+}
+#table1067{
+    width: 100%;
+}
+.left_all table{
+    max-width: 100%;
+}
+.single_tour textarea{
+    max-width: 60%;
+}
+#table1072 select{
+    width: 60%;
+}
+#table1072 textarea {
+    width: 60%;
+}
+
+.catview_list h1 {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.featured_destinations02 {
+    display: none;
+    position: relative;
+    width: 100%;
+}
+.bando {
+    margin-left: 0;
+    width: 100%;
+}
+
+.ct_listcat .list_view {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+.list_view a img {
+    float: left;
+    height: auto;
+    margin: 0 0 5px;
+    width: 100%;
+}
+.special_offers_vietnamhotels{
+    display: none;
+}
+.left_all .bookmark{
+
+}
+iframe{
+    max-width: 100%;
+}
+.attractions_cat {
+    background: none repeat scroll 0 0 #f1f0eb;
+    float: left;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+.attractions_cat h2 {
+    width: 92%;
+}
+
+.gallery_attractions {
+    height: auto;
+    margin-right: 0;
+    margin-top: 8px;
+    width: 25%;
+}
+.gallery_attractions img {
+    border: medium none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+}
+.other_cat h1 {
+    width: 92% !important;
+}
+
+.private_hotels .cat_list_t {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.private_hotels .list_tours{
+	width: 100%;
+}
+.private_hotels .list_tours h2 {
+    width: 100%;
+}
+.private_hotels .list_tours img {
+    height: auto;
+    width: 100%;
+}
+.private_hotels .cam_lao ul li {
+    padding: 3px 0 3px 2%;
+    width: 98%;
+}
+
+.private_hotels .cat_list_t3 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+#contact-us textarea,
+#contact-us input{
+    max-width: 70%;
+}
+
+#secondary {
+    margin-top: 10px;
+    width: 100%;
+}
+div#secondary dl > dd:first-child + dd {
+    float: left;
+    line-height: 160%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+#header_mobile {
+    float: left;
+    width: 100%;
+}
+#header_mobile .navbar-mobile{
+    float: left;
+    width: 100%;
+}
+.navbar-mobile ul{
+    float: left;
+    width: 90%;
+}
+.navbar-mobile ul li{
+    float: left;
+    padding: 13px 10px;
+}
+.navbar-mobile ul li a{
+    color: #fff;
+    font-size: 15px;
+}
+.fa-reorder{
+    display: inline-block;
+    float: right;
+    font-family: FontAwesome;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin-right: 2%;
+    margin-top: 12px;
+    color: #fff;
+    cursor: pointer;
+}
+.fa-reorder:hover{
+    color: #F3AF02;
+}
+.fa-reorder:before{
+    content:"\f0c9"
+}
+.imghome-mobile{ 
+	margin: 1% 1% 3%;
+    width: 96%;
+}
+.slogan > img, .slogan {
+    width: 100%;
+}
+#menu_mobile{
+    float: left;
+    width: 100%;
+	background: #ae978f;
+}
+#menu_mobile li {
+    float: left;
+    width: 100%;text-align:left;
+}
+#menu_mobile li a{
+    float: left;
+    width: 100%;
+	font-size:13px;
+}
+#menu_mobile li ul {padding-left:15px;}
+#menu_mobile .sub-menu li{
+    border: medium none;
+    padding-left: 2%;
+    width: 98%;
+}
+
+.single_imgtour11 {
+    margin-bottom: 5px;
+    padding: 1%;
+    width: 98%;
+}
+.single_imgtour11 img {
+    float: right;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    z-index: 9;
+}
+
+.singlebox {
+    width: 100%;
+}
+
+div.imgright {
+    margin: 6px 0;
+    width: 100%;
+}
+.imgright img {
+    height: auto;
+    margin-bottom: 5px;
+    width: 100%;
+}
+div.imgleft  {
+    margin: 6px 0;
+    width: 100%;
+}
+.imgleft  img {
+    height: auto;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+#also_see h4 {
+    padding-left: 0;
+    width: 100%;
+}
+.related_loop {
+    margin: 5px 0;
+    width: 100%;
+}
+.right_footer img {
+    max-width: 100%;
+}
+
+.tag_hotel {
+    width: 100%;
+}
+
+.tour_in {
+    width: 100%;
+}
+.details_hotel_all {
+    width: 100%;
+}
+
+.details_hotel {
+    margin-right: 0;
+    min-height: 140px;
+    width: 100%;
+}
+
+.hotel_detail img.list_ht_img {
+    border: medium none;
+    height: auto;
+    margin: 4px 0;
+    padding: 0;
+    width: 100%;
+}
+
+.details_hotel .title_hotel {
+    padding-bottom: 0;
+    padding-left: 0;
+}
+.details_hotel_all .details_hotel1 {
+    margin-top: 10px;
+    width: 100%;
+	min-height: 65px;
+}
+.v_more {
+    margin-top: 0;
+}
+
+.viewctht {
+    width: 100%;
+}
+.single_ht {
+    width: 100%;
+}
+
+.viewctht p {
+    float: none !important;
+    font-weight: bold;
+    width: auto !important;
+}
+.left_all div{
+	max-width:100% !important;
+}
+
+#gallery_ht {
+    float: left;
+    margin-left: 0;
+    width: 100%;
+}
+.div660 #gallery_ht{
+	
+}
+.div660 #thumbs {
+    float: left;
+    width: 100% !important;
+}
+ul.thumbs li {
+    margin-left: 0 !important;
+    width: 25%;
+}
+ul.thumbs img {
+    height: auto !important;
+    width: 100% !important;
+}
+div.slideshow img {
+    border: medium none;
+    height: auto !important;
+    vertical-align: middle;
+    width: 100% !important;
+}
+.ct_index {
+    width: 100%;
+}
+.singleht {
+    width: 100%;
+}
+#commentform textarea{
+	max-width:80%;
+}
+
+.ct_sghotel .title_cathotel {
+    width: 100%;
+}
+
+#otherhotelpost {
+    margin-left: 0;
+    margin-top: 0px;
+    width: 100%;
+}
+
+#otherhotelpost div.ar_main_news {
+    width: 100%;
+}
+#otherhotelpost .otherhotel .otherimg {
+    width: 100%;
+}
+
+#otherhotelpost .ar_main_news .title-a {
+    float: left;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.other_cat {
+    width: 100%;
+}
+.other_cat h2 {
+    width: 100%;
+}
+.borderks {
+    border: 0 none;
+    padding: 2%;
+    width: 96%;
+}
+
+.borderks .line strong {
+    width: 30%;
+}
+.line textarea {
+    height: auto;
+    width: 100%;
+}
+.line1 {
+    float: left;
+    padding: 15px 0 5px;
+    width: 100%;
+}
+.borderks .line input.txt-text {
+    width: 50% !important;
+}
+.ban_about img {
+    margin-left: 0;
+	margin-top: 0;
+    width: 100%;
+}
+
+.link_site {
+    display: block;
+    float: left;
+    margin: 10px 0 10px 0;
+    width: 98%;
+}
+.link3 ul {
+    margin-right: 0;
+}
+.link3 li {
+    margin-top: 5px;
+}
+.link3 li {
+    margin-right: 15px;
+    font-weight: bold;
+}
+.link3 ul span{
+	font-size:11px;
+	}
+.lineview {
+    margin: 5px 0;
+    padding-left: 0;
+    width: 100%;
+}
+.likeUs{
+	display:none;
+}
+.cart{width:100%;}
+#top-navi, .footer3{display:none;}
+.logomobi{ display: inline-block;
+    float: left;
+    width: 100%;background:#fff;height:190px;}
+@media only screen and (max-width: 1200px) {
+
+}
+@media only screen and (min-width: 480px) and (max-width: 1200px) {
+}
+@media only screen and (min-width: 961px) and (max-width: 1200px) {
+}
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+}
+@media only screen and (max-width: 719px) {
+	
+}
+@media only screen and (max-width: 479px) {
+	.link-1{padding:0 2px !important;margin:0 2px !important; }
+	#nav-1 h2{width:100% !important;margin:0 0 10px !important;}
+	.recommanded_tours .bgtour{width:99% !important;}
+	.userleft, .userright, .usercenter{width:100%!important;margin: 10px 0 !important}
+	.user2  p{width:100% !Important;}
+	.user2 {margin-bottom:128px !Important;}
+	.footer .span4{padding-bottom:26px;padding-left: 0!important;
+		text-align: center !important;
+		width: 100% !important;}
+	.detailProduct{
+		padding: 0 !important;
+		width: 100% !important;}
+	.info {
+		margin: 0 !important;
+		width: 100%  !important;
+	}
+	#featured-products_block_center{margin-bottom:75px!important}
+	.recommanded_tours{margin:0 !important;}
+	.contactleft, .contactright, #message, #fieldarea input{width:100% !important;margin:0 !important}
+	.footer #wrapper{width:100%}
+	.footer .span7{text-align:center !important;width: 100% !important;}
+}

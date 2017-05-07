@@ -62,17 +62,17 @@ function tin_phan_anh_getByPaging($CurrentPage, $PageSize,$Order,$where)
 //
 function tin_phan_anh_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 {
-   return tin_phan_anh_Get("SELECT tin_phan_anh.id, tin_phan_anh.active, tin_phan_anh.name, tin_phan_anh.name_url, tin_phan_anh.img, tin_phan_anh.title, tin_phan_anh.keyword, tin_phan_anh.description FROM  tin_phan_anh ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
+   return tin_phan_anh_Get("SELECT tin_phan_anh.id, tin_phan_anh.active, tin_phan_anh.name, tin_phan_anh.name_url, tin_phan_anh.img, tin_phan_anh.noi_dung, tin_phan_anh.title, tin_phan_anh.keyword, tin_phan_anh.description FROM  tin_phan_anh ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
 }
 //
 function tin_phan_anh_insert($obj)
 {
-    return exe_query("insert into tin_phan_anh (active,name,name_url,img,title,keyword,description) values ('$obj->active','$obj->name','$obj->name_url','$obj->img','$obj->title','$obj->keyword','$obj->description')",'tin_phan_anh');
+    return exe_query("insert into tin_phan_anh (active,name,name_url,img,noi_dung,title,keyword,description) values ('$obj->active','$obj->name','$obj->name_url','$obj->img','$obj->noi_dung','$obj->title','$obj->keyword','$obj->description')",'tin_phan_anh');
 }
 //
 function tin_phan_anh_update($obj)
 {
-    return exe_query("update tin_phan_anh set active='$obj->active',name='$obj->name',name_url='$obj->name_url',img='$obj->img',title='$obj->title',keyword='$obj->keyword',description='$obj->description' where id=$obj->id",'tin_phan_anh');
+    return exe_query("update tin_phan_anh set active='$obj->active',name='$obj->name',name_url='$obj->name_url',img='$obj->img',noi_dung='$obj->noi_dung',title='$obj->title',keyword='$obj->keyword',description='$obj->description' where id=$obj->id",'tin_phan_anh');
 }
 //
 function tin_phan_anh_delete($obj)
