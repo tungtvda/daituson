@@ -29,7 +29,7 @@ function view_quang_cao($data)
 //
 function showTableHeader()
 {
-    return '<th>id</th><th>name</th><th>img</th><th>top</th><th>bottom</th><th>vi_tri</th>';
+    return '<th>id</th><th>active</th><th>name</th><th>img</th><th>top</th><th>bottom</th><th>vi_tri</th>';
 }
 //
 function showTableBody($data)
@@ -39,6 +39,7 @@ function showTableBody($data)
     {
         $TableBody.="<tr><td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
         $TableBody.="<td>".$obj->id."</td>";
+        $TableBody.="<td>".$obj->active."</td>";
         $TableBody.="<td>".$obj->name."</td>";
         $TableBody.="<td><img src=\"".$obj->img."\" width=\"50px\" height=\"50px\"/> </td>";
         $TableBody.="<td>".$obj->top."</td>";
@@ -55,6 +56,7 @@ function showTableBody($data)
 function showFrom($form,$ListKey=array())
 {
     $str_from='';
+    $str_from.='<p><label>active</label><input  type="checkbox"  name="active" value="1" '.(($form!=false)?(($form->active=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
     $str_from.='<p><label>img</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';
     $str_from.='<p><label>top</label><input  type="checkbox"  name="top" value="1" '.(($form!=false)?(($form->top=='1')?'checked':''):'').' /></p>';

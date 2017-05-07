@@ -1,7 +1,7 @@
 <?php
 class tintuc
 {
-    public $id,$danhmuc_id,$active,$name,$name_url,$img,$tin_moi,$tin_noi_bat,$link_video,$noi_dung,$title,$keyword,$description,$created;
+    public $id,$danhmuc_id,$active,$name,$name_url,$img,$tin_moi,$tin_noi_bat,$link_video,$file_mp4,$noi_dung,$title,$keyword,$description,$created;
     public function tintuc($data=array())
     {
     $this->id=isset($data['id'])?$data['id']:'';
@@ -13,6 +13,7 @@ class tintuc
     $this->tin_moi=isset($data['tin_moi'])?$data['tin_moi']:'';
     $this->tin_noi_bat=isset($data['tin_noi_bat'])?$data['tin_noi_bat']:'';
     $this->link_video=isset($data['link_video'])?$data['link_video']:'';
+    $this->file_mp4=isset($data['file_mp4'])?$data['file_mp4']:'';
     $this->noi_dung=isset($data['noi_dung'])?$data['noi_dung']:'';
     $this->title=isset($data['title'])?$data['title']:'';
     $this->keyword=isset($data['keyword'])?$data['keyword']:'';
@@ -31,6 +32,7 @@ class tintuc
             $this->tin_moi=addslashes($this->tin_moi);
             $this->tin_noi_bat=addslashes($this->tin_noi_bat);
             $this->link_video=addslashes($this->link_video);
+            $this->file_mp4=addslashes($this->file_mp4);
             $this->noi_dung=addslashes($this->noi_dung);
             $this->title=addslashes($this->title);
             $this->keyword=addslashes($this->keyword);
@@ -48,6 +50,7 @@ class tintuc
             $this->tin_moi=stripslashes($this->tin_moi);
             $this->tin_noi_bat=stripslashes($this->tin_noi_bat);
             $this->link_video=stripslashes($this->link_video);
+            $this->file_mp4=stripslashes($this->file_mp4);
             $this->noi_dung=stripslashes($this->noi_dung);
             $this->title=stripslashes($this->title);
             $this->keyword=stripslashes($this->keyword);

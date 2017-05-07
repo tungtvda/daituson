@@ -3,6 +3,7 @@ require_once '../../config.php';
 require_once DIR.'/model/chuong_trinh_phat_thanhService.php';
 require_once DIR.'/view/admin/chuong_trinh_phat_thanh.php';
 require_once DIR.'/common/messenger.php';
+require_once DIR.'/common/locdautiengviet.php';
 $data=array();
 $insert=true;
 if(isset($_SESSION["Admin"]))
@@ -54,7 +55,7 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/chuong_trinh_phat_thanh.php');
         }
     }
-    if(isset($_POST["name"])&&isset($_POST["name_url"])&&isset($_POST["link_mp3"])&&isset($_POST["noi_dung"])&&isset($_POST["title"])&&isset($_POST["keyword"])&&isset($_POST["description"]))
+    if(isset($_POST["name"])&&isset($_POST["name_url"])&&isset($_POST["link_mp3"])&&isset($_POST["file_mp3"])&&isset($_POST["noi_dung"])&&isset($_POST["title"])&&isset($_POST["keyword"])&&isset($_POST["description"]))
     {
        $array=$_POST;
        if(!isset($array['id']))
@@ -65,8 +66,11 @@ if(isset($_SESSION["Admin"]))
        $array['name']='0';
        if(!isset($array['name_url']))
        $array['name_url']='0';
+        $array['name_url']=LocDau($array['name']);
        if(!isset($array['link_mp3']))
        $array['link_mp3']='0';
+       if(!isset($array['file_mp3']))
+       $array['file_mp3']='0';
        if(!isset($array['noi_dung']))
        $array['noi_dung']='0';
        if(!isset($array['title']))
