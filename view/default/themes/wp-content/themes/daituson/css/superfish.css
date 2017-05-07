@@ -1,0 +1,92 @@
+
+/*** ESSENTIAL STYLES ***/
+
+.sf-menu ul {
+	background: none repeat scroll 0 0 white;
+    left: 0;
+    position: absolute;
+    top: 33px;
+    width: 200px;
+}
+.sf-menu ul li {
+	background: url("../images/bg_li_menuheader.png") no-repeat scroll 6px 9px transparent;
+    border-bottom: 1px dotted #CCCCCC;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+}
+.sf-menu ul li:hover {
+	background: none repeat scroll 0 0 #858371 !important;
+}
+.sf-menu ul li:hover a{
+	color:white !important;
+}
+.sf-menu ul li a{
+	color: #574F47 !important; 
+    font-weight: normal !important;
+    padding-left: 18px;
+    text-transform: uppercase !important;
+}
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float:			left;
+	position:		relative;
+}
+.sf-menu a {
+	display:		block;
+	position:		relative;
+}
+
+.sf-menu li.sfHover ul {
+	left:			0;
+	z-index:		999;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+
+
+/*** arrows **/
+.sf-menu a.sf-with-ul {
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+.sf-sub-indicator {
+    background: url("../images/bg_menu_li_header.png") no-repeat scroll left 3px transparent;
+    display: block;
+    height: 10px;
+    overflow: hidden;
+    position: absolute;
+    right: -15px;
+    text-indent: -999em;
+    top: 10px;
+    width: 10px;
+}
+/*
+a > .sf-sub-indicator {
+	top:			7px;
+	background-position: 0 -100px;
+}
+*/
+
+
+/* point right for anchors in subs */
+.sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+.sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+/* apply hovers to modern browsers */
+.sf-menu ul a:focus > .sf-sub-indicator,
+.sf-menu ul a:hover > .sf-sub-indicator,
+.sf-menu ul a:active > .sf-sub-indicator,
+.sf-menu ul li:hover > a > .sf-sub-indicator,
+.sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
