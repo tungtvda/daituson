@@ -57,7 +57,7 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/tintuc.php');
         }
     }
-    if(isset($_POST["danhmuc_id"])&&isset($_POST["name"])&&isset($_POST["name_url"])&&isset($_POST["img"])&&isset($_POST["link_video"])&&isset($_POST["noi_dung"])&&isset($_POST["title"])&&isset($_POST["keyword"])&&isset($_POST["description"])&&isset($_POST["created"]))
+    if(isset($_POST["danhmuc_id"])&&isset($_POST["name"])&&isset($_POST["name_url"])&&isset($_POST["img"])&&isset($_POST["link_video"])&&isset($_POST["file_mp4"])&&isset($_POST["noi_dung"])&&isset($_POST["title"])&&isset($_POST["keyword"])&&isset($_POST["description"])&&isset($_POST["created"]))
     {
        $array=$_POST;
        if(!isset($array['id']))
@@ -79,6 +79,8 @@ if(isset($_SESSION["Admin"]))
        $array['tin_noi_bat']='0';
        if(!isset($array['link_video']))
        $array['link_video']='0';
+       if(!isset($array['file_mp4']))
+       $array['file_mp4']='0';
        if(!isset($array['noi_dung']))
        $array['noi_dung']='0';
        if(!isset($array['title']))

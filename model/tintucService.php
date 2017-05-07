@@ -62,17 +62,17 @@ function tintuc_getByPaging($CurrentPage, $PageSize,$Order,$where)
 //
 function tintuc_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 {
-   return tintuc_Get("SELECT tintuc.id, danh_muc_tin_tuc.name as danhmuc_id, tintuc.active, tintuc.name, tintuc.name_url, tintuc.img, tintuc.tin_moi, tintuc.tin_noi_bat, tintuc.link_video, tintuc.noi_dung, tintuc.title, tintuc.keyword, tintuc.description, tintuc.created FROM  tintuc, danh_muc_tin_tuc where danh_muc_tin_tuc.id=tintuc.danhmuc_id  ".(($where!='')?(' and '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
+   return tintuc_Get("SELECT tintuc.id, danh_muc_tin_tuc.name as danhmuc_id, tintuc.active, tintuc.name, tintuc.name_url, tintuc.img, tintuc.tin_moi, tintuc.tin_noi_bat, tintuc.link_video, tintuc.file_mp4, tintuc.noi_dung, tintuc.title, tintuc.keyword, tintuc.description, tintuc.created FROM  tintuc, danh_muc_tin_tuc where danh_muc_tin_tuc.id=tintuc.danhmuc_id  ".(($where!='')?(' and '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
 }
 //
 function tintuc_insert($obj)
 {
-    return exe_query("insert into tintuc (danhmuc_id,active,name,name_url,img,tin_moi,tin_noi_bat,link_video,noi_dung,title,keyword,description,created) values ('$obj->danhmuc_id','$obj->active','$obj->name','$obj->name_url','$obj->img','$obj->tin_moi','$obj->tin_noi_bat','$obj->link_video','$obj->noi_dung','$obj->title','$obj->keyword','$obj->description','$obj->created')",'tintuc');
+    return exe_query("insert into tintuc (danhmuc_id,active,name,name_url,img,tin_moi,tin_noi_bat,link_video,file_mp4,noi_dung,title,keyword,description,created) values ('$obj->danhmuc_id','$obj->active','$obj->name','$obj->name_url','$obj->img','$obj->tin_moi','$obj->tin_noi_bat','$obj->link_video','$obj->file_mp4','$obj->noi_dung','$obj->title','$obj->keyword','$obj->description','$obj->created')",'tintuc');
 }
 //
 function tintuc_update($obj)
 {
-    return exe_query("update tintuc set danhmuc_id='$obj->danhmuc_id',active='$obj->active',name='$obj->name',name_url='$obj->name_url',img='$obj->img',tin_moi='$obj->tin_moi',tin_noi_bat='$obj->tin_noi_bat',link_video='$obj->link_video',noi_dung='$obj->noi_dung',title='$obj->title',keyword='$obj->keyword',description='$obj->description',created='$obj->created' where id=$obj->id",'tintuc');
+    return exe_query("update tintuc set danhmuc_id='$obj->danhmuc_id',active='$obj->active',name='$obj->name',name_url='$obj->name_url',img='$obj->img',tin_moi='$obj->tin_moi',tin_noi_bat='$obj->tin_noi_bat',link_video='$obj->link_video',file_mp4='$obj->file_mp4',noi_dung='$obj->noi_dung',title='$obj->title',keyword='$obj->keyword',description='$obj->description',created='$obj->created' where id=$obj->id",'tintuc');
 }
 //
 function tintuc_delete($obj)

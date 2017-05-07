@@ -1,10 +1,11 @@
 <?php
 class quang_cao
 {
-    public $id,$name,$img,$top,$bottom,$link,$vi_tri;
+    public $id,$active,$name,$img,$top,$bottom,$link,$vi_tri;
     public function quang_cao($data=array())
     {
     $this->id=isset($data['id'])?$data['id']:'';
+    $this->active=isset($data['active'])?$data['active']:'';
     $this->name=isset($data['name'])?$data['name']:'';
     $this->img=isset($data['img'])?$data['img']:'';
     $this->top=isset($data['top'])?$data['top']:'';
@@ -16,6 +17,7 @@ class quang_cao
     public function encode()
         {
             $this->id=addslashes($this->id);
+            $this->active=addslashes($this->active);
             $this->name=addslashes($this->name);
             $this->img=addslashes($this->img);
             $this->top=addslashes($this->top);
@@ -26,6 +28,7 @@ class quang_cao
     public function decode()
         {
             $this->id=stripslashes($this->id);
+            $this->active=stripslashes($this->active);
             $this->name=stripslashes($this->name);
             $this->img=stripslashes($this->img);
             $this->top=stripslashes($this->top);

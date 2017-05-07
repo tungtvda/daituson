@@ -74,6 +74,7 @@ function showFrom($form,$ListKey=array())
     $str_from.='<p><label>tin_moi</label><input  type="checkbox"  name="tin_moi" value="1" '.(($form!=false)?(($form->tin_moi=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>tin_noi_bat</label><input  type="checkbox"  name="tin_noi_bat" value="1" '.(($form!=false)?(($form->tin_noi_bat=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>link_video</label><input class="text-input small-input" type="text"  name="link_video" value="'.(($form!=false)?$form->link_video:'').'" /></p>';
+    $str_from.='<p><label>file_mp4</label><input class="text-input small-input" type="text"  name="file_mp4" value="'.(($form!=false)?$form->file_mp4:'').'"/><a class="button" onclick="openKcEditor(\'file_mp4\');">Upload file mp4</a></p>';
     $str_from.='<p><label>noi_dung</label><textarea name="noi_dung">'.(($form!=false)?$form->noi_dung:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'noi_dung\'); </script></p>';
     $str_from.='<p><label>title</label><input class="text-input small-input" type="text"  name="title" value="'.(($form!=false)?$form->title:'').'" /></p>';
     $str_from.='<p><label>keyword</label><input class="text-input small-input" type="text"  name="keyword" value="'.(($form!=false)?$form->keyword:'').'" /></p>';

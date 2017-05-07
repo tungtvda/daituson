@@ -62,17 +62,17 @@ function quang_cao_getByPaging($CurrentPage, $PageSize,$Order,$where)
 //
 function quang_cao_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 {
-   return quang_cao_Get("SELECT quang_cao.id, quang_cao.name, quang_cao.img, quang_cao.top, quang_cao.bottom, quang_cao.link, quang_cao.vi_tri FROM  quang_cao ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
+   return quang_cao_Get("SELECT quang_cao.id, quang_cao.active, quang_cao.name, quang_cao.img, quang_cao.top, quang_cao.bottom, quang_cao.link, quang_cao.vi_tri FROM  quang_cao ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
 }
 //
 function quang_cao_insert($obj)
 {
-    return exe_query("insert into quang_cao (name,img,top,bottom,link,vi_tri) values ('$obj->name','$obj->img','$obj->top','$obj->bottom','$obj->link','$obj->vi_tri')",'quang_cao');
+    return exe_query("insert into quang_cao (active,name,img,top,bottom,link,vi_tri) values ('$obj->active','$obj->name','$obj->img','$obj->top','$obj->bottom','$obj->link','$obj->vi_tri')",'quang_cao');
 }
 //
 function quang_cao_update($obj)
 {
-    return exe_query("update quang_cao set name='$obj->name',img='$obj->img',top='$obj->top',bottom='$obj->bottom',link='$obj->link',vi_tri='$obj->vi_tri' where id=$obj->id",'quang_cao');
+    return exe_query("update quang_cao set active='$obj->active',name='$obj->name',img='$obj->img',top='$obj->top',bottom='$obj->bottom',link='$obj->link',vi_tri='$obj->vi_tri' where id=$obj->id",'quang_cao');
 }
 //
 function quang_cao_delete($obj)
