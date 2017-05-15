@@ -29,7 +29,7 @@ function view_config($data)
 //
 function showTableHeader()
 {
-    return '<th>Id</th><th>banner</th><th>icon</th><th>name</th><th>dien_thoai</th><th>fax</th><th>email</th><th>tru_so</th>';
+    return '<th>banner</th><th>icon</th><th>name</th><th>dien_thoai</th><th>fax</th><th>email</th><th>tru_so</th>';
 }
 //
 function showTableBody($data)
@@ -38,7 +38,6 @@ function showTableBody($data)
     if(count($data)>0) foreach($data as $obj)
     {
         $TableBody.="<tr><td><input type=\"checkbox\" name=\"check_".$obj->Id."\"/></td>";
-        $TableBody.="<td>".$obj->Id."</td>";
         $TableBody.="<td><img src=\"".$obj->banner."\" width=\"50px\" height=\"50px\"/> </td>";
         $TableBody.="<td><img src=\"".$obj->icon."\" width=\"50px\" height=\"50px\"/> </td>";
         $TableBody.="<td>".$obj->name."</td>";
@@ -67,6 +66,7 @@ function showFrom($form,$ListKey=array())
     $str_from.='<p><label>giay_phep</label><input class="text-input small-input" type="text"  name="giay_phep" value="'.(($form!=false)?$form->giay_phep:'').'" /></p>';
     $str_from.='<p><label>trach_nhiem_chinh</label><input class="text-input small-input" type="text"  name="trach_nhiem_chinh" value="'.(($form!=false)?$form->trach_nhiem_chinh:'').'" /></p>';
     $str_from.='<p><label>trach_nhiem_noi_dung</label><input class="text-input small-input" type="text"  name="trach_nhiem_noi_dung" value="'.(($form!=false)?$form->trach_nhiem_noi_dung:'').'" /></p>';
+    $str_from.='<p><label>slide_text</label><textarea style="width: 100%" name="slide_text">'.(($form!=false)?$form->slide_text:'').'</textarea></p>';
     $str_from.='<p><label>gioi_thieu</label><textarea name="gioi_thieu">'.(($form!=false)?$form->gioi_thieu:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'gioi_thieu\'); </script></p>';
     $str_from.='<p><label>title</label><input class="text-input small-input" type="text"  name="title" value="'.(($form!=false)?$form->title:'').'" /></p>';
     $str_from.='<p><label>keyword</label><input class="text-input small-input" type="text"  name="keyword" value="'.(($form!=false)?$form->keyword:'').'" /></p>';

@@ -29,7 +29,7 @@ function view_tintuc($data)
 //
 function showTableHeader()
 {
-    return '<th>id</th><th>danhmuc_id</th><th>active</th><th>name</th><th>img</th><th>tin_moi</th><th>tin_noi_bat</th><th>created</th>';
+    return '<th>id</th><th>danhmuc_id</th><th>active</th><th>name</th><th>img</th><th>show_index</th><th>tin_moi</th><th>tin_noi_bat</th><th>created</th>';
 }
 //
 function showTableBody($data)
@@ -43,6 +43,7 @@ function showTableBody($data)
         $TableBody.="<td>".$obj->active."</td>";
         $TableBody.="<td>".$obj->name."</td>";
         $TableBody.="<td><img src=\"".$obj->img."\" width=\"50px\" height=\"50px\"/> </td>";
+        $TableBody.="<td>".$obj->show_index."</td>";
         $TableBody.="<td>".$obj->tin_moi."</td>";
         $TableBody.="<td>".$obj->tin_noi_bat."</td>";
         $TableBody.="<td>".$obj->created."</td>";
@@ -71,6 +72,7 @@ function showFrom($form,$ListKey=array())
     $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
     $str_from.='<p><label>name_url</label><input class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
     $str_from.='<p><label>img</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';
+    $str_from.='<p><label>show_index</label><input  type="checkbox"  name="show_index" value="1" '.(($form!=false)?(($form->show_index=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>tin_moi</label><input  type="checkbox"  name="tin_moi" value="1" '.(($form!=false)?(($form->tin_moi=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>tin_noi_bat</label><input  type="checkbox"  name="tin_noi_bat" value="1" '.(($form!=false)?(($form->tin_noi_bat=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>link_video</label><input class="text-input small-input" type="text"  name="link_video" value="'.(($form!=false)?$form->link_video:'').'" /></p>';

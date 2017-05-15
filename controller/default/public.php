@@ -76,30 +76,7 @@ function  show_left2($data1=array())
 function  show_right($data1=array())
 {
     $data=array();
-    $data['config']=$data1['config'];
-    $data['ykien']=ykien_getByTop('6','','View desc');
-    $data['tour_noi_bat_trongnuoc']=tourtrongnuoc_getByTop('','NoiBat=1','Id desc');
-    $data['tour_noi_bat_quocte']=tourquocte_getByTop('','NoiBat=1','Id desc');
-    if(isset($_POST['dangky_phone']))
-    {
-        $name=addslashes(strip_tags($_POST['Name']));
-        $phone=addslashes(strip_tags($_POST['Phone']));
-        if($name!=""&&$phone!="")
-        {
-            $new =new dangky();
-            $new->Name=$name;
-            $new->Phone=$phone;
-            dangky_insert($new);
-            echo "<script>alert('You have successfully registered consultants, we will contact you as soon as possible, thank you!')</script>";
-        }
-        else{
-            echo "<script>alert('Please enter your name and telephone number for advice')</script>";
-        }
-
-    }
-
-
-
+//    $data['ykien']=ykien_getByTop('6','','View desc');
     view_right($data);
 }
 function show_menu($data1=array(),$active='trangchu')
@@ -107,7 +84,7 @@ function show_menu($data1=array(),$active='trangchu')
     $data=array();
     $data['config']=$data1['config'];
     $data['active']=$active;
-//    $data['mangxahoi']=social_getByTop(1,'','');
+    $data['danhmuc_menu']=danh_muc_tin_tuc_getByTop('','','vi_tri asc');
     view_menu($data);
 }
 
@@ -122,17 +99,6 @@ function show_footer($data1=array())
 {
     $data=array();
     $data['config']=$data1['config'];
-    $data['mangxahoi']=social_getByTop(1,'','');
-    $data['noibat_footer']=sanpham_getByTop(20,'highlights=1','id desc');
-    if (isset($_POST['email_footer'])) {
-        $email=addslashes(strip_tags($_POST['email_footer']));
-        $new_dk = new dangky_email();
-        $new_dk->email=$email;
-        $new_dk->status=0;
-        $new_dk->created=date(DATETIME_FORMAT);
-        dangky_email_insert($new_dk);
-        echo "<script>alert('Đăng ký email thành công')</script>";
-    }
     view_footer($data);
 }
 
