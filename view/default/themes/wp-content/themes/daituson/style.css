@@ -578,7 +578,7 @@ div#wrapper {
 .leftcontent{width:100% !important;margin:0 !important;}
 .dacbiet .thuvien_img{ background:#e8e8e8  ;}
 .dacbiet {
-    height: 352px;
+    /*height: 352px;*/
 	background:#e8e8e8 ;
 }
 .detailchitiet{margin-bottom:70px;}
@@ -2940,7 +2940,7 @@ width: 250px;}
 }
 .slidedonv {
    border-bottom: 1px solid #cccccc;
-    height: 400px;
+    /*height: 400px;*/
     width: 100%;
 }
 .slidedonv h3 {
@@ -3027,8 +3027,9 @@ width: 250px;}
     text-align: center;margin-bottom:10px;
 }
 .video-js{
-	height: 405px;
-    margin: 15px 0;
+	/*height: 405px;*/
+	height: 322px;
+    /*margin: 15px 0;*/
 }
 .detailcontent .slidedonv{height:auto;}
  .page_content_detail2 h1{color: #09387e;

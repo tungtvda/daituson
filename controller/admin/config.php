@@ -54,7 +54,7 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/config.php');
         }
     }
-    if(isset($_POST["banner"])&&isset($_POST["icon"])&&isset($_POST["name"])&&isset($_POST["dien_thoai"])&&isset($_POST["fax"])&&isset($_POST["email"])&&isset($_POST["tru_so"])&&isset($_POST["giay_phep"])&&isset($_POST["trach_nhiem_chinh"])&&isset($_POST["trach_nhiem_noi_dung"])&&isset($_POST["gioi_thieu"])&&isset($_POST["title"])&&isset($_POST["keyword"])&&isset($_POST["description"]))
+    if(isset($_POST["banner"])&&isset($_POST["icon"])&&isset($_POST["name"])&&isset($_POST["dien_thoai"])&&isset($_POST["fax"])&&isset($_POST["email"])&&isset($_POST["tru_so"])&&isset($_POST["giay_phep"])&&isset($_POST["trach_nhiem_chinh"])&&isset($_POST["trach_nhiem_noi_dung"])&&isset($_POST["slide_text"])&&isset($_POST["gioi_thieu"])&&isset($_POST["title"])&&isset($_POST["keyword"])&&isset($_POST["description"]))
     {
        $array=$_POST;
        if(!isset($array['Id']))
@@ -79,6 +79,8 @@ if(isset($_SESSION["Admin"]))
        $array['trach_nhiem_chinh']='0';
        if(!isset($array['trach_nhiem_noi_dung']))
        $array['trach_nhiem_noi_dung']='0';
+       if(!isset($array['slide_text']))
+       $array['slide_text']='0';
        if(!isset($array['gioi_thieu']))
        $array['gioi_thieu']='0';
        if(!isset($array['title']))

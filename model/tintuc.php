@@ -1,7 +1,7 @@
 <?php
 class tintuc
 {
-    public $id,$danhmuc_id,$active,$name,$name_url,$img,$tin_moi,$tin_noi_bat,$link_video,$file_mp4,$noi_dung,$title,$keyword,$description,$created;
+    public $id,$danhmuc_id,$active,$name,$name_url,$img,$show_index,$tin_moi,$tin_noi_bat,$link_video,$file_mp4,$noi_dung,$title,$keyword,$description,$created;
     public function tintuc($data=array())
     {
     $this->id=isset($data['id'])?$data['id']:'';
@@ -10,6 +10,7 @@ class tintuc
     $this->name=isset($data['name'])?$data['name']:'';
     $this->name_url=isset($data['name_url'])?$data['name_url']:'';
     $this->img=isset($data['img'])?$data['img']:'';
+    $this->show_index=isset($data['show_index'])?$data['show_index']:'';
     $this->tin_moi=isset($data['tin_moi'])?$data['tin_moi']:'';
     $this->tin_noi_bat=isset($data['tin_noi_bat'])?$data['tin_noi_bat']:'';
     $this->link_video=isset($data['link_video'])?$data['link_video']:'';
@@ -29,6 +30,7 @@ class tintuc
             $this->name=addslashes($this->name);
             $this->name_url=addslashes($this->name_url);
             $this->img=addslashes($this->img);
+            $this->show_index=addslashes($this->show_index);
             $this->tin_moi=addslashes($this->tin_moi);
             $this->tin_noi_bat=addslashes($this->tin_noi_bat);
             $this->link_video=addslashes($this->link_video);
@@ -47,6 +49,7 @@ class tintuc
             $this->name=stripslashes($this->name);
             $this->name_url=stripslashes($this->name_url);
             $this->img=stripslashes($this->img);
+            $this->show_index=stripslashes($this->show_index);
             $this->tin_moi=stripslashes($this->tin_moi);
             $this->tin_noi_bat=stripslashes($this->tin_noi_bat);
             $this->link_video=stripslashes($this->link_video);

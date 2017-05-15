@@ -1,7 +1,7 @@
 <?php
 class config
 {
-    public $Id,$banner,$icon,$name,$dien_thoai,$fax,$email,$tru_so,$giay_phep,$trach_nhiem_chinh,$trach_nhiem_noi_dung,$gioi_thieu,$title,$keyword,$description;
+    public $Id,$banner,$icon,$name,$dien_thoai,$fax,$email,$tru_so,$giay_phep,$trach_nhiem_chinh,$trach_nhiem_noi_dung,$slide_text,$gioi_thieu,$title,$keyword,$description;
     public function config($data=array())
     {
     $this->Id=isset($data['Id'])?$data['Id']:'';
@@ -15,6 +15,7 @@ class config
     $this->giay_phep=isset($data['giay_phep'])?$data['giay_phep']:'';
     $this->trach_nhiem_chinh=isset($data['trach_nhiem_chinh'])?$data['trach_nhiem_chinh']:'';
     $this->trach_nhiem_noi_dung=isset($data['trach_nhiem_noi_dung'])?$data['trach_nhiem_noi_dung']:'';
+    $this->slide_text=isset($data['slide_text'])?$data['slide_text']:'';
     $this->gioi_thieu=isset($data['gioi_thieu'])?$data['gioi_thieu']:'';
     $this->title=isset($data['title'])?$data['title']:'';
     $this->keyword=isset($data['keyword'])?$data['keyword']:'';
@@ -34,6 +35,7 @@ class config
             $this->giay_phep=addslashes($this->giay_phep);
             $this->trach_nhiem_chinh=addslashes($this->trach_nhiem_chinh);
             $this->trach_nhiem_noi_dung=addslashes($this->trach_nhiem_noi_dung);
+            $this->slide_text=addslashes($this->slide_text);
             $this->gioi_thieu=addslashes($this->gioi_thieu);
             $this->title=addslashes($this->title);
             $this->keyword=addslashes($this->keyword);
@@ -52,6 +54,7 @@ class config
             $this->giay_phep=stripslashes($this->giay_phep);
             $this->trach_nhiem_chinh=stripslashes($this->trach_nhiem_chinh);
             $this->trach_nhiem_noi_dung=stripslashes($this->trach_nhiem_noi_dung);
+            $this->slide_text=stripslashes($this->slide_text);
             $this->gioi_thieu=stripslashes($this->gioi_thieu);
             $this->title=stripslashes($this->title);
             $this->keyword=stripslashes($this->keyword);
