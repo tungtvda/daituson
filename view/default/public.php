@@ -69,17 +69,6 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
 
             if(get_class($item)=='tintuc')
             {
-//                $ft->assign('created',_returnDateFormatConvert($item->created));
-//                $content=$item->content;
-//                if (strlen($content) > 210) {
-//                    $ten1=strip_tags($content);
-//
-//                    $ten = substr($ten1, 0, 210);
-//                    $name = substr($ten, 0, strrpos($ten, ' ')) . "...";
-//                    $ft->assign('content',$name);
-//                } else {
-//                    $ft->assign('content',strip_tags($content));
-//                }
                 $data_dm=danh_muc_tin_tuc_getById($item->danhmuc_id);
                 if(count($data_dm)==0){
                     redict(SITE_NAME);
@@ -88,16 +77,17 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
                 if($dem%2==0){
                     $ft->assign('right','loop-right');
                 }
-//
                 $ft->assign('link',link_news($item,$data_dm[0]->name_url));
             }
-            if(get_class($item)=='danhmuc_tintuc')
+            if(get_class($item)=='chuong_trinh_phat_thanh')
             {
-                $ft->assign('link',link_news($item));
+                $ft->assign('link',link_phat_thanh($item));
             }
 
-
-
+            if(get_class($item)=='tin_phan_anh')
+            {
+                $ft->assign('link',link_phan_anh($item));
+            }
             $dem=$dem+1;
             $result.=$ft->parse_and_return('item');
         }
@@ -114,4 +104,13 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
 function link_news($app,$name_url)
 {
     return SITE_NAME.'/'.$name_url.'/'.$app->name_url.'.html';
+}
+
+function link_phat_thanh($app)
+{
+    return SITE_NAME.'/chuong-trinh-phat-thanh/'.$app->name_url.'.html';
+}
+function link_phan_anh($app)
+{
+    return SITE_NAME.'/tin-bai-phan-anh/'.$app->name_url.'.html';
 }

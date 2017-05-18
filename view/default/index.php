@@ -52,6 +52,22 @@ function show_index($data = array())
         $asign['tintuc_noi_bat_an_ninh_show'] ='';
     }
 
+    $asign['tintuc_noi_bat_hoat_dong'] ='';
+    $asign['tintuc_noi_bat_hoat_dong_show'] ='display: none';
+    if(count($data['tintuc_noi_bat_hoat_dong'])>0)
+    {
+        $asign['tintuc_noi_bat_hoat_dong'] = print_item('danh_muc_tin', $data['tintuc_noi_bat_hoat_dong']);
+        $asign['tintuc_noi_bat_hoat_dong_show'] ='';
+    }
+
+    $asign['tintuc_noi_bat_bai_hat'] ='';
+    $asign['tintuc_noi_bat_bai_hat_show'] ='display: none';
+    if(count($data['tintuc_noi_bat_bai_hat'])>0)
+    {
+        $asign['tintuc_noi_bat_bai_hat'] = print_item('danh_muc_tin', $data['tintuc_noi_bat_bai_hat']);
+        $asign['tintuc_noi_bat_bai_hat_show'] ='';
+    }
+
 
     $asign['video_index']='';
     $asign['name_index']=$data['tintuc_noibat'][0]->name;
