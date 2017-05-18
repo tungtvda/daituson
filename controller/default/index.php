@@ -19,11 +19,13 @@ $data['tintuc_noibat']=tintuc_getByTop(1,'show_index=1','id desc');
 if(count($data['tintuc_noibat'])==0){
     $data['tintuc_noibat']=tintuc_getByTop(1,'','id desc');
 }
-$data['tintuc_noi_bat_chinh_tri']=tintuc_getByTop('','tin_noi_bat=1 and danhmuc_id=2','id desc');
 $data['tintuc_noi_bat_tong_hop']=tintuc_getByTop('','tin_noi_bat=1 and danhmuc_id=1','id desc');
+$data['tintuc_noi_bat_chinh_tri']=tintuc_getByTop('','tin_noi_bat=1 and danhmuc_id=2','id desc');
 $data['tintuc_noi_bat_kinh_te']=tintuc_getByTop('','tin_noi_bat=1 and danhmuc_id=3','id desc');
 $data['tintuc_noi_bat_van_hoa']=tintuc_getByTop('','tin_noi_bat=1 and danhmuc_id=4','id desc');
 $data['tintuc_noi_bat_an_ninh']=tintuc_getByTop('','tin_noi_bat=1 and danhmuc_id=5','id desc');
+$data['tintuc_noi_bat_hoat_dong']=tintuc_getByTop('','tin_noi_bat=1 and danhmuc_id=7','id desc');
+$data['tintuc_noi_bat_bai_hat']=tintuc_getByTop('','tin_noi_bat=1 and danhmuc_id=8','id desc');
 
 $title=$data['config'][0]->title;
 $description= $data['config'][0]->keyword;

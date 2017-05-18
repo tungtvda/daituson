@@ -6,18 +6,17 @@
 <div class=" footer">
     <div id="wrapper" class="clearfix">
         <div id="content">
-            <p>Website Đài phát thanh TX Từ Sơn được Bộ TT và TT cấp phép hoạt động theo giấy phép số 116/GP-TTĐT từ
-                tháng 9/2009.</p>
-            <p>Chịu trách nhiệm chính: Trưởng Đài - Nguyễn Đình Minh.</p>
-            <p>Chịu trách nhiệm nội dung: Phó Trưởng Đài - Nguyễn Thị Châu Loan.</p>
-            <p>Trụ sở : Khu trung tâm TX Từ Sơn - Bắc Ninh.</p>
-            <p>Điện thoại: 02413.835.112 / Fax: 02416.260.112 * Email:phatthanhtuson@gmail.com</p>
+            <p>{giay_phep}</p>
+            <p>Chịu trách nhiệm chính: {trach_nhiem_chinh}.</p>
+            <p>Chịu trách nhiệm nội dung: {trach_nhiem_noi_dung}</p>
+            <p>Trụ sở : {tru_so}</p>
+            <p>Điện thoại: {dien_thoai} / Fax: {fax} * Email:{email}</p>
             <p>Sử dụng thông tin của website phải ghi rõ nguồn http://www.daituson.com.vn</p>
         </div>
     </div>
 </div>
 <div style="display:none;">Đang cập nhật nội dung</div>
-<script src="js/jquery.min.js" type="text/javascript"></script>
+<!--<script src="js/jquery.min.js" type="text/javascript"></script>-->
 
 <style type="text/css">
 

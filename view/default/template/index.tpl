@@ -50,172 +50,17 @@
             {tintuc_noi_bat_an_ninh}
         </div>
     </div>
-    <div class="week left_all index_tour recommanded_tours">
-        <h3 class="titlenews"><a href="hoat-dong-nghiep-vu.html">Hoạt động nghiệp vụ</a></h3>
+    <div class="week left_all index_tour recommanded_tours" style="{tintuc_noi_bat_hoat_dong_show}">
+        <h3 class="titlenews"><a href="{SITE-NAME}/hoat-dong-nghiep-vu/">Hoạt động nghiệp vụ</a></h3>
         <ul class="listvideo">
-
-
-            <li>
-                <a href="avplayer/detail/dai-Tu-Son-to-chuc-giao-ban-cong-tac-PT-TT-quy-I-2017/169.html"><img
-                            src="uploads/media/TS170407_1.jpg" alt="video"/>
-                    <span></span>
-                </a>
-                <h3>
-                    <a href="avplayer/detail/dai-Tu-Son-to-chuc-giao-ban-cong-tac-PT-TT-quy-I-2017/169.html">Đài
-                        Từ Sơn tổ chức giao ban công tác PT-TT quý I/2017</a></h3>
-
-            </li>
-
-
-            <li>
-                <a href="avplayer/detail/Cong-doan-dai-phat-thanh-TX-to-chuc-HN-can-bo-cong-chuc-vien-chu/169.html"><img
-                            src="uploads/media/TS170307_4.jpg" alt="video"/>
-                    <span></span>
-                </a>
-                <h3>
-                    <a href="avplayer/detail/Cong-doan-dai-phat-thanh-TX-to-chuc-HN-can-bo-cong-chuc-vien-chu/169.html">Công
-                        đoàn Đài phát thanh TX tổ chức HN cán bộ công chức, viên chức năm 2017</a></h3>
-
-            </li>
-
-
-            <li>
-                <a href="avplayer/detail/dai-PT-Tu-Son-gap-mat-dau-nam/169.html"><img
-                            src="uploads/media/HDNV170202_2.jpg" alt="video"/>
-                    <span></span>
-                </a>
-                <h3><a href="avplayer/detail/dai-PT-Tu-Son-gap-mat-dau-nam/169.html">Đài PT Từ Sơn gặp
-                        mặt đầu năm</a></h3>
-
-            </li>
-
-
-            <li>
-                <a href="avplayer/detail/dai-Tu-Son-tong-ket-cong-tac-PT-TT-va-binh-tuyen-dai-co-so-la-co/169.html"><img
-                            src="uploads/media/TS161207_2_1.jpg" alt="video"/>
-                    <span></span>
-                </a>
-                <h3>
-                    <a href="avplayer/detail/dai-Tu-Son-tong-ket-cong-tac-PT-TT-va-binh-tuyen-dai-co-so-la-co/169.html">Đài
-                        Từ Sơn tổng kết công tác PT-TT và bình tuyển Đài cơ sở lá cờ đầu</a></h3>
-
-            </li>
-
-
-            <li>
-                <a href="avplayer/detail/Giao-luu-dai-TT-TH-Thanh-Pho-Hoa-Binh/169.html"><img
-                            src="uploads/media/HDNVD160401_1.jpg" alt="video"/>
-                    <span></span>
-                </a>
-                <h3><a href="avplayer/detail/Giao-luu-dai-TT-TH-Thanh-Pho-Hoa-Binh/169.html">Giao lưu
-                        Đài TT - TH Thành Phố Hòa Bình</a></h3>
-
-            </li>
-
-
-            <li>
-                <a href="avplayer/detail/Giao-luu-dai-PT-TH-Tinh-Thua-Thien-Hue/169.html"><img
-                            src="uploads/media/HDNV1108031.jpg" alt="video"/>
-                    <span></span>
-                </a>
-                <h3><a href="avplayer/detail/Giao-luu-dai-PT-TH-Tinh-Thua-Thien-Hue/169.html">Giao lưu
-                        Đài PT -TH Tỉnh Thừa Thiên Huế</a></h3>
-
-            </li>
-
-
-            <li>
-                <a href="avplayer/detail/Giao-luu-dai-TT-TH-huyen-Luc-Ngan-Tinh-Bac-Giang/169.html"><img
-                            src="uploads/media/HDNV070412.jpg" alt="video"/>
-                    <span></span>
-                </a>
-                <h3><a href="avplayer/detail/Giao-luu-dai-TT-TH-huyen-Luc-Ngan-Tinh-Bac-Giang/169.html">Giao
-                        lưu Đài TT -TH huyện Lục Ngạn - Tỉnh Bắc Giang</a></h3>
-
-            </li>
-
-
-            <li>
-                <a href="avplayer/detail/Giao-luu-dai-TT-TH-huyen-dai-Tu-Tinh-Thai-Nguyen/169.html"><img
-                            src="uploads/media/HDNV070206.jpg" alt="video"/>
-                    <span></span>
-                </a>
-                <h3><a href="avplayer/detail/Giao-luu-dai-TT-TH-huyen-dai-Tu-Tinh-Thai-Nguyen/169.html">Giao
-                        lưu Đài TT -TH huyện Đại Từ- Tỉnh Thái Nguyên</a></h3>
-
-            </li>
-
-
+           {tintuc_noi_bat_hoat_dong}
         </ul>
     </div>
 
-    <div class="left_all index_tour recommanded_tours">
-        <h3 class="titlenews"><a href="bai-hat-chon-loc.html">Bài hát chọn lọc</a></h3>
+    <div class="left_all index_tour recommanded_tours" style="{tintuc_noi_bat_bai_hat_show}">
+        <h3 class="titlenews"><a href="{SITE-NAME}/bai-hat-chon-loc/">Bài hát chọn lọc</a></h3>
         <ul class="listvideo">
-
-
-            <li>
-                <a href="avplayer/detail/Khach-den-choi-nha/169.html"><img
-                            src="uploads/media/VCD1989.jpg" alt="video"/>
-                    <span></span>
-                </a>
-                <h3><a href="avplayer/detail/Khach-den-choi-nha/169.html">Khách đến chơi nhà</a></h3>
-
-            </li>
-
-
-            <li>
-                <a href="avplayer/detail/Ve-que-quan-ho/169.html"><img src="uploads/media/VCD1987.jpg"
-                                                                       alt="video"/>
-                    <span></span>
-                </a>
-                <h3><a href="avplayer/detail/Ve-que-quan-ho/169.html">Về quê quan họ</a></h3>
-
-            </li>
-
-
-            <li>
-                <a href="avplayer/detail/Khuc-hat-lang-nghe/169.html"><img
-                            src="uploads/media/VCD1984.jpg" alt="video"/>
-                    <span></span>
-                </a>
-                <h3><a href="avplayer/detail/Khuc-hat-lang-nghe/169.html">Khúc hát làng nghề</a></h3>
-
-            </li>
-
-
-            <li>
-                <a href="avplayer/detail/den-do-khong-hen-cung-len/169.html"><img
-                            src="uploads/media/VCD1983.jpg" alt="video"/>
-                    <span></span>
-                </a>
-                <h3><a href="avplayer/detail/den-do-khong-hen-cung-len/169.html">Đền Đô không hẹn cũng
-                        lên</a></h3>
-
-            </li>
-
-
-            <li>
-                <a href="avplayer/detail/Hat-ve-Tu-Son/169.html"><img src="uploads/media/TS.jpg"
-                                                                      alt="video"/>
-                    <span></span>
-                </a>
-                <h3><a href="avplayer/detail/Hat-ve-Tu-Son/169.html">Hát về Từ Sơn</a></h3>
-
-            </li>
-
-
-            <li>
-                <a href="avplayer/detail/Bai-ca-nguoi-lam-bao/169.html"><img
-                            src="uploads/media/Bac_Ho.jpg" alt="video"/>
-                    <span></span>
-                </a>
-                <h3><a href="avplayer/detail/Bai-ca-nguoi-lam-bao/169.html">Bài ca người làm báo</a>
-                </h3>
-
-            </li>
-
-
+           {tintuc_noi_bat_bai_hat}
         </ul>
     </div>
 </div><!-- end #ct_left  -->
