@@ -87,6 +87,18 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
             if(get_class($item)=='tin_phan_anh')
             {
                 $ft->assign('link',link_phan_anh($item));
+                $content=$item->noi_dung;
+                if (strlen($content) > 300) {
+                    $ten1=strip_tags($content);
+
+                    $ten = substr($ten1, 0, 300);
+                    $name = substr($ten, 0, strrpos($ten, ' ')) . "...";
+                    $ft->assign('noi_dung',$name);
+                } else {
+                    $ft->assign('noi_dung',strip_tags($content));
+                }
+                $created = date("d-m-Y", strtotime($item->created));
+                $ft->assign('created',strip_tags($created));
             }
             $dem=$dem+1;
             $result.=$ft->parse_and_return('item');

@@ -1,7 +1,7 @@
 <?php
 class tin_phan_anh
 {
-    public $id,$active,$name,$name_url,$img,$noi_dung,$title,$keyword,$description;
+    public $id,$active,$name,$name_url,$img,$noi_dung,$title,$keyword,$description,$created;
     public function tin_phan_anh($data=array())
     {
     $this->id=isset($data['id'])?$data['id']:'';
@@ -13,6 +13,7 @@ class tin_phan_anh
     $this->title=isset($data['title'])?$data['title']:'';
     $this->keyword=isset($data['keyword'])?$data['keyword']:'';
     $this->description=isset($data['description'])?$data['description']:'';
+    $this->created=isset($data['created'])?$data['created']:'';
           $this->encode();
     }
     public function encode()
@@ -26,6 +27,7 @@ class tin_phan_anh
             $this->title=addslashes($this->title);
             $this->keyword=addslashes($this->keyword);
             $this->description=addslashes($this->description);
+            $this->created=addslashes($this->created);
         }
     public function decode()
         {
@@ -38,5 +40,6 @@ class tin_phan_anh
             $this->title=stripslashes($this->title);
             $this->keyword=stripslashes($this->keyword);
             $this->description=stripslashes($this->description);
+            $this->created=stripslashes($this->created);
         }
 }
