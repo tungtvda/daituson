@@ -55,7 +55,7 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/tin_phan_anh.php');
         }
     }
-    if(isset($_POST["name"])&&isset($_POST["name_url"])&&isset($_POST["img"])&&isset($_POST["noi_dung"])&&isset($_POST["title"])&&isset($_POST["keyword"])&&isset($_POST["description"]))
+    if(isset($_POST["name"])&&isset($_POST["name_url"])&&isset($_POST["img"])&&isset($_POST["noi_dung"])&&isset($_POST["title"])&&isset($_POST["keyword"])&&isset($_POST["description"])&&isset($_POST["created"]))
     {
        $array=$_POST;
        if(!isset($array['id']))
@@ -77,6 +77,9 @@ if(isset($_SESSION["Admin"]))
        $array['keyword']='0';
        if(!isset($array['description']))
        $array['description']='0';
+       if(!isset($array['created']))
+       $array['created']='0';
+        $array['created']=date(DATETIME_FORMAT);
       $new_obj=new tin_phan_anh($array);
         if($insert)
         {

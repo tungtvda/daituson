@@ -11,6 +11,8 @@ function view_menu($data = array())
     $asign['menu']='';
     $asign['trangchu_mn'] = ($data['active'] == 'trangchu') ? 'menuactive current-menu-item' : '';
     $asign['gioithieu_mn'] = ($data['active'] == 'gioithieu') ? 'menuactive current-menu-item' : '';
+    $asign['lienhe_mn'] = ($data['active'] == 'lienhe') ? 'menuactive current-menu-item' : '';
+    $asign['phatthanh_mn'] = ($data['active'] == 'chuong-trinh-phat-thanh') ? 'menuactive current-menu-item' : '';
     foreach($data['danhmuc_menu'] as $row_menu){
         $active='';
         if($row_menu->name_url==$data['active']){

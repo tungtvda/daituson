@@ -36,7 +36,7 @@ function view_right($data=array())
     $asign['link_website'] ='';
     if(count($data['link_website'])>0)
     {
-        $asign['link_website'] = print_item('tintuc_item', $data['link_website']);
+        $asign['link_website'] = print_item('link_web', $data['link_website']);
     }
     $asign['quang_cao_full'] ='';
     if(count($data['quang_cao_top'])>0)
@@ -44,5 +44,20 @@ function view_right($data=array())
         $asign['quang_cao_full'] = print_item('quang_cao', $data['quang_cao_full']);
     }
     $asign['number']=$data['number'][0]->number;
+
+    $REMOTE_ADDR=$_SERVER['REMOTE_ADDR'];
+    $PHP_SELF=$_SERVER['PHP_SELF'];
+    $tg=time();
+    $tgout=900;
+    $tgnew=$tg - $tgout;
+    $user_online=new useronline();
+    $user_online->tgtmp=$tg;
+    $user_online->ip=$REMOTE_ADDR;
+    $user_online->local=$PHP_SELF;
+    useronline_insert($user_online);
+    useronline_delete_check($tgnew);
+    $data_user_online=useronline_count('local="'.$PHP_SELF.'"');
+//    echo "user online :$user";
+
     print_template($asign,'right');
 }

@@ -25,8 +25,8 @@
 
                     <ul id="menu_mobile" class="menu_mnu_mobile">
 
-                        <li class="menuactive current-menu-item">
-                            <a class="{trangchu_mn}"
+                        <li class="{trangchu_mn}">
+                            <a
                                href="{SITE-NAME}">
                                 Trang chủ
                             </a>
@@ -38,11 +38,11 @@
 
                         {menu}
 
-                        <li>
+                        <li class="{phatthanh_mn}">
                             <a href="{SITE-NAME}/chuong-trinh-phat-thanh/">Chương trình phát thanh</a>
                         </li>
 
-                        <li>
+                        <li class="{lienhe_mn}">
                             <a href="{SITE-NAME}/lien-he.html">Liên hệ</a>
                         </li>
                     </ul>
@@ -70,8 +70,8 @@
     <div class="full_wrapper">
         <div id="top-navi">
             <ul id="menu" class="menu_mnu sf-menu">
-                <li class="menuactive current-menu-item">
-                    <a class="{trangchu_mn}"
+                <li class="{trangchu_mn}">
+                    <a
                        href="{SITE-NAME}">
                         Trang chủ
                     </a>
@@ -83,11 +83,11 @@
 
                 {menu}
 
-                <li>
+                <li class="{phatthanh_mn}">
                     <a href="{SITE-NAME}/chuong-trinh-phat-thanh/">Chương trình phát thanh</a>
                 </li>
 
-                <li>
+                <li class="{lienhe_mn}">
                     <a href="{SITE-NAME}/lien-he.html">Liên hệ</a>
                 </li>
             </ul>

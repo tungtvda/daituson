@@ -303,3 +303,12 @@ insert into tin_phan_anh (active,name,name_url,img,noi_dung,title,keyword,descri
 <p style=\"margin: 0px; padding: 6px 0px; font-family: helvetica; font-size: 15px; line-height: 23px; color: rgb(60, 59, 59); text-align: justify;\">
 	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
 ','KẾ HOẠCH TRIỂN KHAI CÁC HOẠT ĐỘNG TUYÊN TRUYỀN KỶ NIỆM 105 NĂM NGÀY SINH TBT NGUYỄN VĂN CỪ (9/7/1912-9/7/2017)','KẾ HOẠCH TRIỂN KHAI CÁC HOẠT ĐỘNG TUYÊN TRUYỀN KỶ NIỆM 105 NĂM NGÀY SINH TBT NGUYỄN VĂN CỪ (9/7/1912-9/7/2017)','KẾ HOẠCH TRIỂN KHAI CÁC HOẠT ĐỘNG TUYÊN TRUYỀN KỶ NIỆM 105 NĂM NGÀY SINH TBT NGUYỄN VĂN CỪ (9/7/1912-9/7/2017)');
+insert into tin_phan_anh (active,name,name_url,img,noi_dung,title,keyword,description,created) values ('1','test','test','fasdf','','','','','');
+delete from tin_phan_anh where id=8;
+insert into tin_phan_anh (active,name,name_url,img,noi_dung,title,keyword,description,created) values ('0','asdfasdf','asdfasdf','','','','','','');
+update tin_phan_anh set active='0',name='asdfasdf',name_url='asdfasdf',img='',noi_dung='',title='',keyword='',description='',created='17-05-20 06:19:11' where id=9;
+delete from tin_phan_anh where id=9;
+insert into tin_phan_anh (active,name,name_url,img,noi_dung,title,keyword,description,created) values ('0','frg','frg','','','','','','17-05-20 06:19:21');
+delete from tin_phan_anh where id=10;
+insert into tin_phan_anh (active,name,name_url,img,noi_dung,title,keyword,description,created) values ('0','sdafas','sdafas','','','','','','17-05-20 06:20:45');
+delete from tin_phan_anh where id=11;
