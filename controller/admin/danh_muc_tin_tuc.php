@@ -14,7 +14,7 @@ if(isset($_SESSION["Admin"]))
         {
             $new_obj= new danh_muc_tin_tuc();
             $new_obj->id=$_GET["id"];
-            danh_muc_tin_tuc_delete($new_obj);
+//            danh_muc_tin_tuc_delete($new_obj);
             header('Location: '.SITE_NAME.'/controller/admin/danh_muc_tin_tuc.php');
         }
         else if($_GET["action"]=="edit")
@@ -50,7 +50,7 @@ if(isset($_SESSION["Admin"]))
             $List_danh_muc_tin_tuc=danh_muc_tin_tuc_getByAll();
             foreach($List_danh_muc_tin_tuc as $danh_muc_tin_tuc)
             {
-                if(isset($_GET["check_".$danh_muc_tin_tuc->id])) danh_muc_tin_tuc_delete($danh_muc_tin_tuc);
+//                if(isset($_GET["check_".$danh_muc_tin_tuc->id])) danh_muc_tin_tuc_delete($danh_muc_tin_tuc);
             }
             header('Location: '.SITE_NAME.'/controller/admin/danh_muc_tin_tuc.php');
         }

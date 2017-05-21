@@ -10,7 +10,7 @@
 
 <div class="footer">
     <div class="footerleft"></div>
-    <div class="footerright">&copy; Hệ thống quản trị được thiết kết bởi <a href="http://vifonic.com/"> Vifonic.com</a></div>
+    <div class="footerright">&copy; Hệ thống quản trị được thiết kết bởi <a> tungtv</a></div>
 </div>
 <!--footer-->
 
@@ -124,5 +124,4 @@
 
 </body>
 
-<!-- Mirrored from demo.themepixels.com/webpage/katniss/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jul 2015 09:21:28 GMT -->
 </html>

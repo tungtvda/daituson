@@ -13,7 +13,7 @@ if(isset($_SESSION["Admin"]))
         {
             $new_obj= new config();
             $new_obj->Id=$_GET["Id"];
-            config_delete($new_obj);
+//            config_delete($new_obj);
             header('Location: '.SITE_NAME.'/controller/admin/config.php');
         }
         else if($_GET["action"]=="edit")
@@ -49,7 +49,7 @@ if(isset($_SESSION["Admin"]))
             $List_config=config_getByAll();
             foreach($List_config as $config)
             {
-                if(isset($_GET["check_".$config->Id])) config_delete($config);
+//                if(isset($_GET["check_".$config->Id])) config_delete($config);
             }
             header('Location: '.SITE_NAME.'/controller/admin/config.php');
         }

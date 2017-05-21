@@ -20,6 +20,7 @@ function view_quang_cao($data)
     $ft->assign('CONTENT-BOX-RIGHT',isset($data['content_box_right'])?$data['content_box_right']:' ');
     $ft->assign('NOTIFICATION',isset($data['notification'])?$data['notification']:' ');
     $ft->assign('SITE-NAME',isset($data['sitename'])?$data['sitename']:SITE_NAME);
+    $ft->assign('kichhoat_quangcao', 'active');
     $ft->assign('FORM',showFrom(isset($data['form'])?$data['form']:'',isset($data['listfkey'])?$data['listfkey']:array()));
     //
     print $ft->parse_and_return('header');
@@ -56,8 +57,8 @@ function showTableBody($data)
 function showFrom($form,$ListKey=array())
 {
     $str_from='';
-    $str_from.='<p><label>active</label><input  type="checkbox"  name="active" value="1" '.(($form!=false)?(($form->active=='1')?'checked':''):'').' /></p>';
-    $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
+    $str_from.='<p><label>Kích hoạt</label><input  type="checkbox"  name="active" value="1" '.(($form!=false)?(($form->active=='1')?'checked':''):'').' /></p>';
+    $str_from.='<p><label>Tên</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
     $str_from.='<p><label>img</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';
     $str_from.='<p><label>top</label><input  type="checkbox"  name="top" value="1" '.(($form!=false)?(($form->top=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>bottom</label><input  type="checkbox"  name="bottom" value="1" '.(($form!=false)?(($form->bottom=='1')?'checked':''):'').' /></p>';

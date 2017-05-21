@@ -20,6 +20,7 @@ function view_chuong_trinh_phat_thanh($data)
     $ft->assign('CONTENT-BOX-RIGHT',isset($data['content_box_right'])?$data['content_box_right']:' ');
     $ft->assign('NOTIFICATION',isset($data['notification'])?$data['notification']:' ');
     $ft->assign('SITE-NAME',isset($data['sitename'])?$data['sitename']:SITE_NAME);
+    $ft->assign('kichhoat_chuongtrinh', 'active');
     $ft->assign('FORM',showFrom(isset($data['form'])?$data['form']:'',isset($data['listfkey'])?$data['listfkey']:array()));
     //
     print $ft->parse_and_return('header');
@@ -29,7 +30,7 @@ function view_chuong_trinh_phat_thanh($data)
 //
 function showTableHeader()
 {
-    return '<th>id</th><th>active</th><th>name</th>';
+    return '<th>id</th><th>Kích hoạt</th><th>Tên</th>';
 }
 //
 function showTableBody($data)
@@ -53,12 +54,12 @@ function showTableBody($data)
 function showFrom($form,$ListKey=array())
 {
     $str_from='';
-    $str_from.='<p><label>active</label><input  type="checkbox"  name="active" value="1" '.(($form!=false)?(($form->active=='1')?'checked':''):'').' /></p>';
-    $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
-    $str_from.='<p><label>name_url</label><input class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
-    $str_from.='<p><label>link_mp3</label><input class="text-input small-input" type="text"  name="link_mp3" value="'.(($form!=false)?$form->link_mp3:'').'" /></p>';
+    $str_from.='<p><label>Kích hoạt</label><input  type="checkbox"  name="active" value="1" '.(($form!=false)?(($form->active=='1')?'checked':''):'').' /></p>';
+    $str_from.='<p><label>Tên</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
+    $str_from.='<p><label>Url</label><input readonly class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
+    $str_from.='<p hidden><label>link_mp3</label><input class="text-input small-input" type="text"  name="link_mp3" value="'.(($form!=false)?$form->link_mp3:'').'" /></p>';
     $str_from.='<p><label>file_mp3</label><input class="text-input small-input" type="text"  name="file_mp3" value="'.(($form!=false)?$form->file_mp3:'').'"/><a class="button" onclick="openKcEditor(\'file_mp3\');">Upload file mp3</a></p>';
-    $str_from.='<p><label>noi_dung</label><textarea name="noi_dung">'.(($form!=false)?$form->noi_dung:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'noi_dung\'); </script></p>';
+    $str_from.='<p><label>Nội dung</label><textarea name="noi_dung">'.(($form!=false)?$form->noi_dung:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'noi_dung\'); </script></p>';
     $str_from.='<p><label>title</label><input class="text-input small-input" type="text"  name="title" value="'.(($form!=false)?$form->title:'').'" /></p>';
     $str_from.='<p><label>keyword</label><input class="text-input small-input" type="text"  name="keyword" value="'.(($form!=false)?$form->keyword:'').'" /></p>';
     $str_from.='<p><label>description</label><input class="text-input small-input" type="text"  name="description" value="'.(($form!=false)?$form->description:'').'" /></p>';

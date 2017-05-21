@@ -92,7 +92,10 @@ if(isset($_SESSION["Admin"]))
        if(!isset($array['created']))
        $array['created']='0';
         $array['created']=date(DATETIME_FORMAT);
-      $new_obj=new tintuc($array);
+        $new_obj=new tintuc($array);
+        if($array['show_index']==1){
+            tintuc_update_show_index();
+        }
         if($insert)
         {
             tintuc_insert($new_obj);
@@ -106,10 +109,30 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/tintuc.php');
         }
     }
+    $dk='';
+    $dk_count='';
+    if(isset($_GET['giatri'])&&$_GET['giatri']!=''){
+        $key_timkiem=mb_strtolower(addslashes(strip_tags($_GET['giatri'])));
+        $dk_count='name LIKE "%'.$key_timkiem.'%" or name_url LIKE "%'.$key_timkiem.'%" or title LIKE "%'.$key_timkiem.'%" or keyword LIKE "%'.$key_timkiem.'%" or description LIKE "%'.$key_timkiem.'%"';
+        $dk='(tintuc.name LIKE "%'.$key_timkiem.'%" or tintuc.name_url LIKE "%'.$key_timkiem.'%" or tintuc.title LIKE "%'.$key_timkiem.'%" or tintuc.keyword LIKE "%'.$key_timkiem.'%" or tintuc.description LIKE "%'.$key_timkiem.'%")';
+    }
+    if(isset($_GET['danhmuc_id'])&&$_GET['danhmuc_id']!=''){
+        $danhmuc_id=mb_strtolower(addslashes(strip_tags($_GET['danhmuc_id'])));
+        if($dk!='')
+        {
+            $dk.=' (and tintuc.danhmuc_id='.$danhmuc_id.')';
+            $dk_count.=' and danhmuc_id='.$danhmuc_id;
+        }
+        else{
+            $dk.='  tintuc.danhmuc_id='.$danhmuc_id.'';
+            $dk_count.='  danhmuc_id='.$danhmuc_id;
+        }
+
+    }
     $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
-    $data['count_paging']=tintuc_count('');
+    $data['count_paging']=tintuc_count($dk_count);
     $data['page']=isset($_GET['page'])?$_GET['page']:'1';
-    $data['table_body']=tintuc_getByPagingReplace($data['page'],20,'id DESC','');
+    $data['table_body']=tintuc_getByPagingReplace($data['page'],20,'id DESC',$dk);
     // gọi phương thức trong tầng view để hiển thị
     view_tintuc($data);
 }
