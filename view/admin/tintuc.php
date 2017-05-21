@@ -31,7 +31,7 @@ function view_tintuc($data)
 //
 function showTableHeader()
 {
-    return '<th>id</th><th>danhmuc_id</th><th>active</th><th>name</th><th>img</th><th>show_index</th><th>tin_moi</th><th>tin_noi_bat</th><th>created</th>';
+    return '<th>id</th><th>Danh mục</th><th>Kích hoạt</th><th>Tên</th><th>Ảnh</th><th>Hiện index</th><th>Mới</th><th>Ngày tạo</th>';
 }
 //
 function showTableBody($data)
@@ -47,7 +47,6 @@ function showTableBody($data)
         $TableBody.="<td><img src=\"".$obj->img."\" width=\"50px\" height=\"50px\"/> </td>";
         $TableBody.="<td>".$obj->show_index."</td>";
         $TableBody.="<td>".$obj->tin_moi."</td>";
-        $TableBody.="<td>".$obj->tin_noi_bat."</td>";
         $TableBody.="<td>".$obj->created."</td>";
         $TableBody.="<td><a href=\"?action=edit&id=".$obj->id."\" title=\"Edit\"><img src=\"".SITE_NAME."/view/admin/Themes/images/pencil.png\" alt=\"Edit\"></a>";
         $TableBody.="<a href=\"?action=delete&id=".$obj->id."\" title=\"Delete\" onClick=\"return confirm('Bạn có chắc chắc muốn xóa?')\"><img src=\"".SITE_NAME."/view/admin/Themes/images/cross.png\" alt=\"Delete\"></a> ";
@@ -70,19 +69,19 @@ function showFrom($form,$ListKey=array())
         }
     }
     $str_from.='</select></p>';
-    $str_from.='<p><label>active</label><input  type="checkbox"  name="active" value="1" '.(($form!=false)?(($form->active=='1')?'checked':''):'').' /></p>';
-    $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
-    $str_from.='<p><label>name_url</label><input class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
-    $str_from.='<p><label>img</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';
-    $str_from.='<p><label>show_index</label><input  type="checkbox"  name="show_index" value="1" '.(($form!=false)?(($form->show_index=='1')?'checked':''):'').' /></p>';
-    $str_from.='<p><label>tin_moi</label><input  type="checkbox"  name="tin_moi" value="1" '.(($form!=false)?(($form->tin_moi=='1')?'checked':''):'').' /></p>';
-    $str_from.='<p><label>tin_noi_bat</label><input  type="checkbox"  name="tin_noi_bat" value="1" '.(($form!=false)?(($form->tin_noi_bat=='1')?'checked':''):'').' /></p>';
-    $str_from.='<p><label>link_video</label><input class="text-input small-input" type="text"  name="link_video" value="'.(($form!=false)?$form->link_video:'').'" /></p>';
-    $str_from.='<p><label>file_mp4</label><input class="text-input small-input" type="text"  name="file_mp4" value="'.(($form!=false)?$form->file_mp4:'').'"/><a class="button" onclick="openKcEditor(\'file_mp4\');">Upload file mp4</a></p>';
-    $str_from.='<p><label>noi_dung</label><textarea name="noi_dung">'.(($form!=false)?$form->noi_dung:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'noi_dung\'); </script></p>';
+    $str_from.='<p><label>Kích hoạt</label><input  type="checkbox"  name="active" value="1" '.(($form!=false)?(($form->active=='1')?'checked':''):'').' /></p>';
+    $str_from.='<p><label>Tên</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
+    $str_from.='<p><label>Url</label><input readonly class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
+    $str_from.='<p><label>Ảnh</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';
+    $str_from.='<p><label>Hiện index</label><input  type="checkbox"  name="show_index" value="1" '.(($form!=false)?(($form->show_index=='1')?'checked':''):'').' /></p>';
+    $str_from.='<p><label>Tin mới</label><input  type="checkbox"  name="tin_moi" value="1" '.(($form!=false)?(($form->tin_moi=='1')?'checked':''):'').' /></p>';
+    $str_from.='<p hidden><label>tin_noi_bat</label><input  type="checkbox"  name="tin_noi_bat" value="1" '.(($form!=false)?(($form->tin_noi_bat=='1')?'checked':''):'').' /></p>';
+    $str_from.='<p><label>Link Youtube</label><input class="text-input small-input" type="text"  name="link_video" value="'.(($form!=false)?$form->link_video:'').'" /></p>';
+    $str_from.='<p><label>File mp4</label><input class="text-input small-input" type="text"  name="file_mp4" value="'.(($form!=false)?$form->file_mp4:'').'"/><a class="button" onclick="openKcEditor(\'file_mp4\');">Upload file mp4</a></p>';
+    $str_from.='<p><label>Nội dung</label><textarea name="noi_dung">'.(($form!=false)?$form->noi_dung:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'noi_dung\'); </script></p>';
     $str_from.='<p><label>title</label><input class="text-input small-input" type="text"  name="title" value="'.(($form!=false)?$form->title:'').'" /></p>';
     $str_from.='<p><label>keyword</label><input class="text-input small-input" type="text"  name="keyword" value="'.(($form!=false)?$form->keyword:'').'" /></p>';
     $str_from.='<p><label>description</label><input class="text-input small-input" type="text"  name="description" value="'.(($form!=false)?$form->description:'').'" /></p>';
-    $str_from.='<p><label>created</label><input class="text-input small-input" type="text"  name="created" value="'.(($form!=false)?$form->created:'').'" /></p>';
+    $str_from.='<p><label>Ngày tạo</label><input readonly class="text-input small-input" type="text"  name="created" value="'.(($form!=false)?$form->created:'').'" /></p>';
     return $str_from;
 }

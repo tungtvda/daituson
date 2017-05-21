@@ -30,7 +30,7 @@ function view_tin_phan_anh($data)
 //
 function showTableHeader()
 {
-    return '<th>active</th><th>name</th><th>img</th><th>created</th>';
+    return '<th>Kích hoạt</th><th>Tên</th><th>Ảnh</th><th>Ngày tạo</th>';
 }
 //
 function showTableBody($data)
@@ -54,14 +54,14 @@ function showTableBody($data)
 function showFrom($form,$ListKey=array())
 {
     $str_from='';
-    $str_from.='<p hidden><label>active</label><input  type="checkbox"  name="active" value="1" '.(($form!=false)?(($form->active=='1')?'checked':''):'').' /></p>';
-    $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
-    $str_from.='<p><label>url</label><input readonly="readonly" class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
-    $str_from.='<p><label>img</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';
-    $str_from.='<p><label>noi_dung</label><textarea name="noi_dung">'.(($form!=false)?$form->noi_dung:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'noi_dung\'); </script></p>';
+    $str_from.='<p><label>Kích hoạt</label><input  type="checkbox"  name="active" value="1" '.(($form!=false)?(($form->active=='1')?'checked':''):'').' /></p>';
+    $str_from.='<p><label>Tên</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
+    $str_from.='<p><label>Url</label><input readonly="readonly" class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
+    $str_from.='<p><label>Ảnh</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';
+    $str_from.='<p><label>Nội dung</label><textarea name="noi_dung">'.(($form!=false)?$form->noi_dung:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'noi_dung\'); </script></p>';
     $str_from.='<p><label>title</label><input class="text-input small-input" type="text"  name="title" value="'.(($form!=false)?$form->title:'').'" /></p>';
     $str_from.='<p><label>keyword</label><input class="text-input small-input" type="text"  name="keyword" value="'.(($form!=false)?$form->keyword:'').'" /></p>';
     $str_from.='<p><label>description</label><input class="text-input small-input" type="text"  name="description" value="'.(($form!=false)?$form->description:'').'" /></p>';
-    $str_from.='<p hidden><label>created</label><input class="text-input small-input" type="text"  name="created" value="'.(($form!=false)?$form->created:'').'" /></p>';
+    $str_from.='<p hidden><label>Ngày tạo</label><input class="text-input small-input" type="text"  name="created" value="'.(($form!=false)?$form->created:'').'" /></p>';
     return $str_from;
 }

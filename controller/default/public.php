@@ -77,11 +77,11 @@ function  show_right($data1=array())
 {
     $data=array();
     $data['phat_thanh_left']=chuong_trinh_phat_thanh_getByTop('15','','id desc');
-    $data['quang_cao_top']=quang_cao_getByTop('','top=1','id desc');
-    $data['quang_cao_bottom']=quang_cao_getByTop('','bottom=1','id desc');
-    $data['phan_anh_left']=tin_phan_anh_getByTop('6','','id desc');
+    $data['quang_cao_top']=quang_cao_getByTop('','active=1 and top=1 ','id desc');
+    $data['quang_cao_bottom']=quang_cao_getByTop('','active=1 and  bottom=1','id desc');
+    $data['phan_anh_left']=tin_phan_anh_getByTop('6','active=1','id desc');
     $data['link_website']=link_website_getByTop('','','id desc');
-    $data['quang_cao_full']=quang_cao_getByTop('','bottom!=1 and top!=1','id desc');
+    $data['quang_cao_full']=quang_cao_getByTop('','active=1 and bottom!=1 and top!=1','id desc');
     $data['number']=truy_cap_getById(1);
     view_right($data);
 }

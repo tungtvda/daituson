@@ -30,7 +30,7 @@ function view_quang_cao($data)
 //
 function showTableHeader()
 {
-    return '<th>id</th><th>active</th><th>name</th><th>img</th><th>top</th><th>bottom</th><th>vi_tri</th>';
+    return '<th>id</th><th>Kích hoạt</th><th>Tên</th><th>Ảnh</th><th>Top</th><th>Bottom</th><th>Vị trí</th>';
 }
 //
 function showTableBody($data)
@@ -63,6 +63,6 @@ function showFrom($form,$ListKey=array())
     $str_from.='<p><label>top</label><input  type="checkbox"  name="top" value="1" '.(($form!=false)?(($form->top=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>bottom</label><input  type="checkbox"  name="bottom" value="1" '.(($form!=false)?(($form->bottom=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>link</label><input class="text-input small-input" type="text"  name="link" value="'.(($form!=false)?$form->link:'').'" /></p>';
-    $str_from.='<p><label>vi_tri</label><input class="text-input small-input" type="text"  name="vi_tri" value="'.(($form!=false)?$form->vi_tri:'').'" /></p>';
+    $str_from.='<p><label>Vị trí</label><input class="text-input small-input" type="text"  name="vi_tri" value="'.(($form!=false)?$form->vi_tri:'').'" /></p>';
     return $str_from;
 }

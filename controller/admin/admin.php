@@ -91,9 +91,9 @@ if(isset($_SESSION["Admin"]))
         }
     }
     $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
-    $data['count_paging']=admin_count('');
+    $data['count_paging']=admin_count('id!=1');
     $data['page']=isset($_GET['page'])?$_GET['page']:'1';
-    $data['table_body']=admin_getByPagingReplace($data['page'],20,'Id DESC','');
+    $data['table_body']=admin_getByPagingReplace($data['page'],20,'Id DESC','admin.id!=1');
     // gọi phương thức trong tầng view để hiển thị
     view_admin($data);
 }

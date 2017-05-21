@@ -30,7 +30,7 @@ function view_link_website($data)
 //
 function showTableHeader()
 {
-    return '<th>id</th><th>name</th><th>link</th><th>vi_tri</th>';
+    return '<th>id</th><th>Tên</th><th>Link</th><th>Vị trí</th>';
 }
 //
 function showTableBody($data)
@@ -54,8 +54,8 @@ function showTableBody($data)
 function showFrom($form,$ListKey=array())
 {
     $str_from='';
-    $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
-    $str_from.='<p><label>link</label><input class="text-input small-input" type="text"  name="link" value="'.(($form!=false)?$form->link:'').'" /></p>';
-    $str_from.='<p><label>vi_tri</label><input class="text-input small-input" type="text"  name="vi_tri" value="'.(($form!=false)?$form->vi_tri:'').'" /></p>';
+    $str_from.='<p><label>Tên</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
+    $str_from.='<p><label>Link</label><input class="text-input small-input" type="text"  name="link" value="'.(($form!=false)?$form->link:'').'" /></p>';
+    $str_from.='<p><label>Vị trí</label><input class="text-input small-input" type="text"  name="vi_tri" value="'.(($form!=false)?$form->vi_tri:'').'" /></p>';
     return $str_from;
 }

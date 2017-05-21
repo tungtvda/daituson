@@ -64,10 +64,10 @@ function showFrom($form,$ListKey=array())
     $str_from.='<p><label>email</label><input class="text-input small-input" type="text"  name="email" value="'.(($form!=false)?$form->email:'').'" /></p>';
     $str_from.='<p><label>Trụ sở</label><input class="text-input small-input" type="text"  name="tru_so" value="'.(($form!=false)?$form->tru_so:'').'" /></p>';
     $str_from.='<p><label>Giấy phép</label><input class="text-input small-input" type="text"  name="giay_phep" value="'.(($form!=false)?$form->giay_phep:'').'" /></p>';
-    $str_from.='<p><label>trach_nhiem_chinh</label><input class="text-input small-input" type="text"  name="trach_nhiem_chinh" value="'.(($form!=false)?$form->trach_nhiem_chinh:'').'" /></p>';
-    $str_from.='<p><label>trach_nhiem_noi_dung</label><input class="text-input small-input" type="text"  name="trach_nhiem_noi_dung" value="'.(($form!=false)?$form->trach_nhiem_noi_dung:'').'" /></p>';
-    $str_from.='<p><label>slide_text</label><textarea style="width: 100%" name="slide_text">'.(($form!=false)?$form->slide_text:'').'</textarea></p>';
-    $str_from.='<p><label>gioi_thieu</label><textarea name="gioi_thieu">'.(($form!=false)?$form->gioi_thieu:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'gioi_thieu\'); </script></p>';
+    $str_from.='<p><label>Trách nhiệm chính</label><input class="text-input small-input" type="text"  name="trach_nhiem_chinh" value="'.(($form!=false)?$form->trach_nhiem_chinh:'').'" /></p>';
+    $str_from.='<p><label>Trách nhiệm nội dung</label><input class="text-input small-input" type="text"  name="trach_nhiem_noi_dung" value="'.(($form!=false)?$form->trach_nhiem_noi_dung:'').'" /></p>';
+    $str_from.='<p><label>Slide text</label><textarea style="width: 100%" name="slide_text">'.(($form!=false)?$form->slide_text:'').'</textarea></p>';
+    $str_from.='<p><label>Giới thiệu</label><textarea name="gioi_thieu">'.(($form!=false)?$form->gioi_thieu:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'gioi_thieu\'); </script></p>';
     $str_from.='<p><label>title</label><input class="text-input small-input" type="text"  name="title" value="'.(($form!=false)?$form->title:'').'" /></p>';
     $str_from.='<p><label>keyword</label><input class="text-input small-input" type="text"  name="keyword" value="'.(($form!=false)?$form->keyword:'').'" /></p>';
     $str_from.='<p><label>description</label><input class="text-input small-input" type="text"  name="description" value="'.(($form!=false)?$form->description:'').'" /></p>';
