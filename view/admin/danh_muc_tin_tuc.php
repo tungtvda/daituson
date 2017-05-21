@@ -15,11 +15,13 @@ function view_danh_muc_tin_tuc($data)
     $ft->assign('TABLE-HEADER',showTableHeader());
     $ft->assign('PAGING',showPaging($data['count_paging'],20,$data['page']));
     $ft->assign('TABLE-BODY',showTableBody($data['table_body']));
-    $ft->assign('TABLE-NAME','danh_muc_tin_tuc');
+    $ft->assign('TABLE-NAME','Danh mục tin tức');
     $ft->assign('CONTENT-BOX-LEFT',isset($data['content_box_left'])?$data['content_box_left']:'');
     $ft->assign('CONTENT-BOX-RIGHT',isset($data['content_box_right'])?$data['content_box_right']:' ');
     $ft->assign('NOTIFICATION',isset($data['notification'])?$data['notification']:' ');
     $ft->assign('SITE-NAME',isset($data['sitename'])?$data['sitename']:SITE_NAME);
+    $ft->assign('kichhoat_tintuc_hienthi', 'display: block');
+    $ft->assign('kichhoat_tintuc', 'active');
     $ft->assign('FORM',showFrom(isset($data['form'])?$data['form']:'',isset($data['listfkey'])?$data['listfkey']:array()));
     //
     print $ft->parse_and_return('header');
@@ -29,7 +31,7 @@ function view_danh_muc_tin_tuc($data)
 //
 function showTableHeader()
 {
-    return '<th>id</th><th>name</th><th>vi_tri</th>';
+    return '<th>id</th><th>Tên</th><th>Vị trí</th><th>Danh sách tin</th>';
 }
 //
 function showTableBody($data)
@@ -41,8 +43,8 @@ function showTableBody($data)
         $TableBody.="<td>".$obj->id."</td>";
         $TableBody.="<td>".$obj->name."</td>";
         $TableBody.="<td>".$obj->vi_tri."</td>";
+        $TableBody.="<td><a href='".SITE_NAME."/controller/admin/tintuc.php?danhmuc_id=".$obj->id."' >Danh sách tin</a>";
         $TableBody.="<td><a href=\"?action=edit&id=".$obj->id."\" title=\"Edit\"><img src=\"".SITE_NAME."/view/admin/Themes/images/pencil.png\" alt=\"Edit\"></a>";
-        $TableBody.="<a href=\"?action=delete&id=".$obj->id."\" title=\"Delete\" onClick=\"return confirm('Bạn có chắc chắc muốn xóa?')\"><img src=\"".SITE_NAME."/view/admin/Themes/images/cross.png\" alt=\"Delete\"></a> ";
         $TableBody.="</td>";
         $TableBody.="</tr>";
     }
@@ -52,9 +54,9 @@ function showTableBody($data)
 function showFrom($form,$ListKey=array())
 {
     $str_from='';
-    $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
-    $str_from.='<p><label>name_url</label><input class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
-    $str_from.='<p><label>vi_tri</label><input class="text-input small-input" type="text"  name="vi_tri" value="'.(($form!=false)?$form->vi_tri:'').'" /></p>';
+    $str_from.='<p><label>Tên</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
+    $str_from.='<p><label>Url</label><input readonly class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
+    $str_from.='<p><label>Vị trí</label><input class="text-input small-input" type="text"  name="vi_tri" value="'.(($form!=false)?$form->vi_tri:'').'" /></p>';
     $str_from.='<p><label>title</label><input class="text-input small-input" type="text"  name="title" value="'.(($form!=false)?$form->title:'').'" /></p>';
     $str_from.='<p><label>keyword</label><input class="text-input small-input" type="text"  name="keyword" value="'.(($form!=false)?$form->keyword:'').'" /></p>';
     $str_from.='<p><label>description</label><input class="text-input small-input" type="text"  name="description" value="'.(($form!=false)?$form->description:'').'" /></p>';

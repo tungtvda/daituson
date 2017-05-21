@@ -70,7 +70,7 @@ if(isset($_SESSION["Admin"]))
         $new_obj=new admin($array);
         if($insert)
         {
-            $new_obj->MatKhau=hash_pass($_POST["Pass"]);
+            $new_obj->MatKhau=hash_pass($_POST["MatKhau"]);
             $new_obj->MatKhau=$Pass;
             admin_insert($new_obj);
             header('Location: '.SITE_NAME.'/controller/admin/admin.php');

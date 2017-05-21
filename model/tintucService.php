@@ -90,3 +90,8 @@ function tintuc_count($where)
     }
    else return false;
 }
+
+function tintuc_update_show_index()
+{
+    return exe_query("update tintuc set show_index=0",'tintuc');
+}

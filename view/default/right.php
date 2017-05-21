@@ -58,6 +58,6 @@ function view_right($data=array())
     useronline_delete_check($tgnew);
     $data_user_online=useronline_count('local="'.$PHP_SELF.'"');
 //    echo "user online :$user";
-
+    $asign['online']=$data_user_online;
     print_template($asign,'right');
 }

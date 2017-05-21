@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 
-<!-- Mirrored from demo.themepixels.com/webpage/katniss/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jul 2015 09:21:11 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Katniss Premium Admin Template</title>
+    <title>HỆ THỐNG QUẢN TRỊ ĐÀI TỪ SƠN</title>
     <link rel="stylesheet" href="{SITE-NAME}/view/admin/Themes/css/style.default.css" type="text/css"/>
     <link rel="stylesheet" href="{SITE-NAME}/view/admin/Themes/css/prettify.css" type="text/css"/>
     <script type="text/javascript" src="{SITE-NAME}/view/admin/Themes/js/prettify.js"></script>
@@ -35,16 +34,16 @@
     <div class="leftpanel">
 
         <div class="logopanel" style="text-align: center!important;">
-           <a href="http://vifonic.com/"><img style="height: 36px" src="{SITE-NAME}/view/admin/Themes/images/logo.png" title="Hệ thống quản trị của Vifonic.com" alt="Hệ thống quản trị của Vifonic.com"></a>
+           <a style="color: #ffffff; font-size: 30px">TUNGTV</a>
         </div>
         <!--logopanel-->
 
         <div class="datewidget"><iframe scrolling="no" frameborder="no" style="overflow:hidden;border:0;margin:0;padding:0;width:235px;height:45px;"src="http://clocklink.com/html5embed.php?clock=lat&timezone=ICT&color=gray&size=235&Title=&Message=&Target=&From=2015,1,1,0,0,0&Color=gray"></iframe></div>
 
         <div class="searchwidget">
-            <form action="" method="post">
+            <form action="" method="get">
                 <div class="input-append">
-                    <input type="text" class="span2 search-query" placeholder="Tìm kiếm...">
+                    <input type="text" name="giatri" class="span2 search-query" placeholder="Tìm kiếm...">
                     <button type="submit" class="btn"><span class="icon-search"></span></button>
                 </div>
             </form>
@@ -60,17 +59,16 @@
                 <li class="{kichhoat}"><a href="{SITE-NAME}/admin"><span class="icon-align-justify"></span> Dashboard</a></li>
                 <li class="{kichhoat_admin}" ><a href="{SITE-NAME}/controller/admin/admin.php"><span class="icon-user"></span> Tài khoản quản trị</a></li>
                 <li class="{kichhoat_config}"><a href="{SITE-NAME}/controller/admin/config.php"><span class=" icon-wrench"></span> Cấu hình hệ thống</a></li>
-                <li class="{kichhoat_lienhe}"><a href="{SITE-NAME}/controller/admin/lienhe.php"><span class="icon-envelope"></span> Liên hệ</a></li>
                 <li class="dropdown {kichhoat_tintuc}"><a href="#"><span class=" icon-edit"></span> Tin tức</a>
-                    <ul>
+                    <ul style="{kichhoat_tintuc_hienthi}">
                         <li><a href="{SITE-NAME}/controller/admin/danh_muc_tin_tuc.php">Danh mục</a></li>
                         <li><a href="{SITE-NAME}/controller/admin/tintuc.php">Danh sách </a></li>
                     </ul>
                 </li>
-                <li class="{kichhoat_lienhe}"><a href="{SITE-NAME}/controller/admin/chuong_trinh_phat_thanh.php"><span class="icon-bullhorn"></span> Chương trình phát thanh</a></li>
+                <li class="{kichhoat_chuongtrinh}"><a href="{SITE-NAME}/controller/admin/chuong_trinh_phat_thanh.php"><span class="icon-bullhorn"></span> Chương trình phát thanh</a></li>
 
                 <li class="{kichhoat_lienket}"><a href="{SITE-NAME}/controller/admin/link_website.php"><span class="iconfa-link"></span> Liên kết website</a></li>
-                <li class="{kichhoat_lienhe}"><a href="{SITE-NAME}/controller/admin/quang_cao.php"><span class="icon-gift"></span> Quảng cáo</a></li>
+                <li class="{kichhoat_quangcao}"><a href="{SITE-NAME}/controller/admin/quang_cao.php"><span class="icon-gift"></span> Quảng cáo</a></li>
                 <li class="{kichhoat_ykien}"><a href="{SITE-NAME}/controller/admin/tin_phan_anh.php"><span class="icon-comment"></span> Tin phản ảnh</a></li>
             </ul>
         </div>
