@@ -42,8 +42,8 @@ switch($danh_muc){
         $keyword='Tin bài phản ánh';
         $data['current']=isset($_GET['page'])?$_GET['page']:'1';
         $data['pagesize']=15;
-        $data['count']=tin_phan_anh_count('');
-        $data['danhsach']=tin_phan_anh_getByPaging($data['current'],$data['pagesize'],'id desc','');
+        $data['count']=tin_phan_anh_count('active=1');
+        $data['danhsach']=tin_phan_anh_getByPaging($data['current'],$data['pagesize'],'id desc','active=1');
         $data['PAGING'] = showPagingAtLink($data['count'], $data['pagesize'], $data['current'], '' . SITE_NAME . '/tin-bai-phan-anh/');
         $action='show_phananh';
         break;
@@ -52,7 +52,7 @@ switch($danh_muc){
         if(count($data['data_danhmuc'])==0){
             redict(SITE_NAME);
         }
-        $dk='danhmuc_id='.$data['data_danhmuc'][0]->id;
+        $dk='active=1 and danhmuc_id='.$data['data_danhmuc'][0]->id;
         $data['current']=isset($_GET['page'])?$_GET['page']:'1';
         $data['pagesize']=12;
         $data['count']=tintuc_count($dk);

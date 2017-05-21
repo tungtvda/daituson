@@ -50,6 +50,9 @@ switch($danh_muc){
         $description= $data['detail'][0]->keyword;
         $keyword=$data['detail'][0]->description;
         $data['html']='detail_phan_anh';
+        if($data['detail'][0]->active==0){
+            redict(SITE_NAME);
+        }
         break;
     default:
         $data['data_danhmuc']=danh_muc_tin_tuc_getByTop(1,'name_url="'.$danh_muc.'"','id desc');
@@ -65,15 +68,19 @@ switch($danh_muc){
         $title=$data['detail'][0]->title;
         $description= $data['detail'][0]->keyword;
         $keyword=$data['detail'][0]->description;
+        if($data['detail'][0]->active==0){
+            redict(SITE_NAME);
+        }
 }
-$data['tintuc_moi']=tintuc_getByTop(10,'tin_moi=1','id desc');
-$data['tintuc_noi_bat_tong_hop']=tintuc_getByTop(10,' danhmuc_id=1','id desc');
-$data['tintuc_noi_bat_chinh_tri']=tintuc_getByTop(10,'danhmuc_id=2','id desc');
-$data['tintuc_noi_bat_kinh_te']=tintuc_getByTop(10,'danhmuc_id=3','id desc');
-$data['tintuc_noi_bat_van_hoa']=tintuc_getByTop(10,'danhmuc_id=4','id desc');
-$data['tintuc_noi_bat_an_ninh']=tintuc_getByTop(10,'danhmuc_id=5','id desc');
-$data['tintuc_noi_bat_hoat_dong']=tintuc_getByTop(10,'danhmuc_id=7','id desc');
-$data['tintuc_noi_bat_bai_hat']=tintuc_getByTop(10,'danhmuc_id=8','id desc');
+
+$data['tintuc_moi']=tintuc_getByTop(10,'active=1 and tin_moi=1','id desc');
+$data['tintuc_noi_bat_tong_hop']=tintuc_getByTop(10,'active=1 and danhmuc_id=1','id desc');
+$data['tintuc_noi_bat_chinh_tri']=tintuc_getByTop(10,'active=1 and danhmuc_id=2','id desc');
+$data['tintuc_noi_bat_kinh_te']=tintuc_getByTop(10,'active=1 and danhmuc_id=3','id desc');
+$data['tintuc_noi_bat_van_hoa']=tintuc_getByTop(10,'active=1 and danhmuc_id=4','id desc');
+$data['tintuc_noi_bat_an_ninh']=tintuc_getByTop(10,'active=1 and danhmuc_id=5','id desc');
+$data['tintuc_noi_bat_hoat_dong']=tintuc_getByTop(10,'active=1 and danhmuc_id=7','id desc');
+$data['tintuc_noi_bat_bai_hat']=tintuc_getByTop(10,'active=1 and danhmuc_id=8','id desc');
 $title=($title)?$title:'daituson.com.vn';
 $description=($description)?$description:'daituson.com.vn';
 $keywords=($keyword)?$keyword:'daituson.com.vn';

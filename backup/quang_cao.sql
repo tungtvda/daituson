@@ -8,3 +8,4 @@ update quang_cao set active='1',name='Học tập',img='/daituson/view/admin/The
 update quang_cao set active='1',name='',img='/daituson/view/admin/Themes/kcfinder/upload/images/quang_cao/bien-dao-la-que-huong.jpg',top='0',bottom='0',link='',vi_tri='3' where id=3;
 update quang_cao set active='1',name='',img='/daituson/view/admin/Themes/kcfinder/upload/images/quang_cao/danhchoquangcao-daituson.gif',top='0',bottom='0',link='',vi_tri='4' where id=4;
 insert into quang_cao (active,name,img,top,bottom,link,vi_tri) values ('0','','/daituson/view/admin/Themes/kcfinder/upload/images/quang_cao/ngay-vi-nguoi-ngheo.jpg','0','0','','5');
+update quang_cao set active='1',name='',img='/daituson/view/admin/Themes/kcfinder/upload/images/quang_cao/ngay-vi-nguoi-ngheo.jpg',top='0',bottom='0',link='',vi_tri='5' where id=5;
