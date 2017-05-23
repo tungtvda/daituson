@@ -30,9 +30,20 @@
     <div class="right_all search dacbiet heightright">
         <h3><a href=" ">Thống kê truy cập</a></h3>
         <div class="thuvien_img">
-            <ul>
+            <!--<style>
+                .thongke li div{
+                    background-image: url('{SITE-NAME}/view/defaul/themes/images/wau-widget.png')!important;
+                }
+            </style>-->
+            <ul class="thongke">
                 <li><a>Đang online:
-                        {online}</a></li>
+                        <script id="_wauu7z">var _wau = _wau || [];
+                            _wau.push(["colored", "09v8aegbr4or", "u7z", "ffc20e000000"]);
+                            (function() {var s=document.createElement("script"); s.async=true;
+                            s.src="//widgets.amung.us/colored.js";
+                            document.getElementsByTagName("head")[0].appendChild(s);
+                            })();</script>
+                    </a></li>
                 <li><a>Tổng số truy cập: {number}</a></li>
             </ul>
         </div>

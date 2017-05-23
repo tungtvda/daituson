@@ -67,7 +67,7 @@ function tintuc_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 //
 function tintuc_insert($obj)
 {
-    return exe_query("insert into tintuc (danhmuc_id,active,name,name_url,img,show_index,tin_moi,tin_noi_bat,link_video,file_mp4,noi_dung,title,keyword,description,created) values ('$obj->danhmuc_id','$obj->active','$obj->name','$obj->name_url','$obj->img','$obj->show_index',''$obj->tin_moi','$obj->tin_noi_bat','$obj->link_video','$obj->file_mp4','$obj->noi_dung','$obj->title','$obj->keyword','$obj->description','$obj->created')",'tintuc');
+    return exe_query("insert into tintuc (danhmuc_id,active,name,name_url,img,show_index,tin_moi,tin_noi_bat,link_video,file_mp4,noi_dung,title,keyword,description,created) values ('$obj->danhmuc_id','$obj->active','$obj->name','$obj->name_url','$obj->img','$obj->show_index','$obj->tin_moi','$obj->tin_noi_bat','$obj->link_video','$obj->file_mp4','$obj->noi_dung','$obj->title','$obj->keyword','$obj->description','$obj->created')",'tintuc');
 }
 //
 function tintuc_update($obj)
