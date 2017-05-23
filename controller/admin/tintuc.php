@@ -89,11 +89,13 @@ if(isset($_SESSION["Admin"]))
        $array['keyword']='0';
        if(!isset($array['description']))
        $array['description']='0';
+        if(!isset($array['show_index']))
+            $array['show_index']='0';
        if(!isset($array['created']))
        $array['created']='0';
         $array['created']=date(DATETIME_FORMAT);
         $new_obj=new tintuc($array);
-        if($array['show_index']==1){
+        if(isset($array['show_index']) && $array['show_index']==1){
             tintuc_update_show_index();
         }
         if($insert)
