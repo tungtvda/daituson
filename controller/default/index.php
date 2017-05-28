@@ -27,6 +27,8 @@ $data['tintuc_noi_bat_an_ninh']=tintuc_getByTop(10,'active=1 and danhmuc_id=5','
 $data['tintuc_noi_bat_hoat_dong']=tintuc_getByTop(10,'active=1 and danhmuc_id=7','id desc');
 $data['tintuc_noi_bat_bai_hat']=tintuc_getByTop(10,'active=1 and danhmuc_id=8','id desc');
 
+$data['danhmuc_name']=danh_muc_tin_tuc_getByTop('','','');
+
 $title=$data['config'][0]->title;
 $description= $data['config'][0]->keyword;
 $keyword=$data['config'][0]->description;

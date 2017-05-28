@@ -2923,7 +2923,12 @@ width: 250px;}
     margin-bottom: 10px;
     display: inline-block;
 }
-.dacbiet li{position:relative;}
+.dacbiet li{
+    position:relative;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
 .dacbiet li ul{display:none;}
 #fix a{color:#7e0000 !important;}
 #fix li:hover a{color:#fff !important;}

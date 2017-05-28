@@ -116,6 +116,23 @@ function show_detail($data = array())
 
     }
 
+    $asign['name_tonghop']=$data['danhmuc_name'][0]->name;
+    $asign['name_chinhtri']=$data['danhmuc_name'][1]->name;
+    $asign['name_kinhte']=$data['danhmuc_name'][2]->name;
+    $asign['name_vanhoa']=$data['danhmuc_name'][3]->name;
+    $asign['name_anninh']=$data['danhmuc_name'][4]->name;
+    $asign['name_phongsu']=$data['danhmuc_name'][5]->name;
+    $asign['name_nghiepvu']=$data['danhmuc_name'][6]->name;
+    $asign['name_chonloc']=$data['danhmuc_name'][7]->name;
+
+    $asign['name_tonghop_url']=$data['danhmuc_name'][0]->name_url;
+    $asign['name_chinhtri_url']=$data['danhmuc_name'][1]->name_url;
+    $asign['name_kinhte_url']=$data['danhmuc_name'][2]->name_url;
+    $asign['name_vanhoa_url']=$data['danhmuc_name'][3]->name_url;
+    $asign['name_anninh_url']=$data['danhmuc_name'][4]->name_url;
+    $asign['name_phongsu_url']=$data['danhmuc_name'][5]->name_url;
+    $asign['name_nghiepvu_url']=$data['danhmuc_name'][6]->name_url;
+    $asign['name_chonloc_url']=$data['danhmuc_name'][7]->name_url;
     print_template($asign, $html);
 }
 
