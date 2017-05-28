@@ -72,7 +72,7 @@ switch($danh_muc){
             redict(SITE_NAME);
         }
 }
-
+$data['danhmuc_name']=danh_muc_tin_tuc_getByTop('','','');
 $data['tintuc_moi']=tintuc_getByTop(10,'active=1 and tin_moi=1','id desc');
 $data['tintuc_noi_bat_tong_hop']=tintuc_getByTop(10,'active=1 and danhmuc_id=1','id desc');
 $data['tintuc_noi_bat_chinh_tri']=tintuc_getByTop(10,'active=1 and danhmuc_id=2','id desc');
