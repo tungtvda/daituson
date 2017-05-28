@@ -24,6 +24,7 @@ $data['tintuc_noi_bat_chinh_tri']=tintuc_getByTop(10,'active=1 and danhmuc_id=2'
 $data['tintuc_noi_bat_kinh_te']=tintuc_getByTop(10,'active=1 and danhmuc_id=3','id desc');
 $data['tintuc_noi_bat_van_hoa']=tintuc_getByTop(10,'active=1 and danhmuc_id=4','id desc');
 $data['tintuc_noi_bat_an_ninh']=tintuc_getByTop(10,'active=1 and danhmuc_id=5','id desc');
+$data['tintuc_noi_bat_phong_su']=tintuc_getByTop(10,'active=1 and danhmuc_id=6','id desc');
 $data['tintuc_noi_bat_hoat_dong']=tintuc_getByTop(10,'active=1 and danhmuc_id=7','id desc');
 $data['tintuc_noi_bat_bai_hat']=tintuc_getByTop(10,'active=1 and danhmuc_id=8','id desc');
 

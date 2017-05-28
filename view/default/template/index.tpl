@@ -53,7 +53,14 @@
     <div class="week left_all index_tour recommanded_tours" style="{tintuc_noi_bat_hoat_dong_show}">
         <h3 class="titlenews"><a href="{SITE-NAME}/{name_phongsu_url}/">{name_phongsu}</a></h3>
         <ul class="listvideo">
-           {tintuc_noi_bat_hoat_dong}
+           {tintuc_noi_bat_phong_su}
+        </ul>
+    </div>
+
+    <div class="week left_all index_tour recommanded_tours" style="{tintuc_noi_bat_hoat_dong_show}">
+        <h3 class="titlenews"><a href="{SITE-NAME}/{name_nghiepvu_url}/">{name_nghiepvu}</a></h3>
+        <ul class="listvideo">
+            {tintuc_noi_bat_hoat_dong}
         </ul>
     </div>
 
