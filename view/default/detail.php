@@ -100,6 +100,15 @@ function show_detail($data = array())
             $asign['tintuc_noi_bat_hoat_dong_show'] ='';
         }
 
+        $asign['tintuc_noi_bat_phong_su'] ='';
+        $asign['tintuc_noi_bat_phong_su_show'] ='display: none';
+        if(count($data['tintuc_noi_bat_phong_su'])>0)
+        {
+            $asign['tintuc_noi_bat_phong_su'] = print_item('danh_muc_tin', $data['tintuc_noi_bat_phong_su']);
+            $asign['tintuc_noi_bat_phong_su_show'] ='';
+        }
+
+
         $asign['tintuc_noi_bat_bai_hat'] ='';
         $asign['tintuc_noi_bat_bai_hat_show'] ='display: none';
         if(count($data['tintuc_noi_bat_bai_hat'])>0)
