@@ -64,7 +64,7 @@ switch($danh_muc){
         if(count($data['detail'])==0){
             redict(SITE_NAME);
         }
-        $data['tintuc_lien_quan']=tintuc_getByTop(4,'id!='.$data['detail'][0]->id,'id desc');
+        $data['tintuc_lien_quan']=tintuc_getByTop(6,'id!='.$data['detail'][0]->id.' and danhmuc_id='.$data['detail'][0]->danhmuc_id,'id desc');
         $title=$data['detail'][0]->title;
         $description= $data['detail'][0]->keyword;
         $keyword=$data['detail'][0]->description;
