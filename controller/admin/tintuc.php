@@ -113,7 +113,9 @@ if(isset($_SESSION["Admin"]))
     }
     $dk='';
     $dk_count='';
+    $dk_pt='';
     if(isset($_GET['giatri'])&&$_GET['giatri']!=''){
+        $dk_pt='&giatri='.$_GET['giatri'];
         $key_timkiem=mb_strtolower(addslashes(strip_tags($_GET['giatri'])));
         $dk_count='name LIKE "%'.$key_timkiem.'%" or name_url LIKE "%'.$key_timkiem.'%" or title LIKE "%'.$key_timkiem.'%" or keyword LIKE "%'.$key_timkiem.'%" or description LIKE "%'.$key_timkiem.'%"';
         $dk='(tintuc.name LIKE "%'.$key_timkiem.'%" or tintuc.name_url LIKE "%'.$key_timkiem.'%" or tintuc.title LIKE "%'.$key_timkiem.'%" or tintuc.keyword LIKE "%'.$key_timkiem.'%" or tintuc.description LIKE "%'.$key_timkiem.'%")';
@@ -129,13 +131,14 @@ if(isset($_SESSION["Admin"]))
             $dk.='  tintuc.danhmuc_id='.$danhmuc_id.'';
             $dk_count.='  danhmuc_id='.$danhmuc_id;
         }
-
+        $dk_pt='&danhmuc_id='.$danhmuc_id;
     }
     $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
     $data['count_paging']=tintuc_count($dk_count);
     $data['page']=isset($_GET['page'])?$_GET['page']:'1';
     $data['table_body']=tintuc_getByPagingReplace($data['page'],20,'id DESC',$dk);
     // gọi phương thức trong tầng view để hiển thị
+    $data['dk_pt']=$dk_pt;
     view_tintuc($data);
 }
 else
