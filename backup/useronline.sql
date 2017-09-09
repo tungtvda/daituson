@@ -156,3 +156,5 @@ insert into useronline (tgtmp,ip,local) values ('1495938666','::1','/daituson/in
 delete from useronline where tgtmp <1495937766;
 insert into useronline (tgtmp,ip,local) values ('1496674580','::1','/daituson/index.php');
 delete from useronline where tgtmp <1496673680;
+insert into useronline (tgtmp,ip,local) values ('1504956340','::1','/daituson/index.php');
+delete from useronline where tgtmp <1504955440;
