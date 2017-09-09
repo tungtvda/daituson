@@ -21,5 +21,24 @@ function view_menu($data = array())
         $asign['menu'].='<li class="'.$active.'"> <a href="'.SITE_NAME.'/'.$row_menu->name_url.'/">'.$row_menu->name.'</a></li>';
     }
 
+    $asign['slide_text_tac_do']='6';
+    if($data['config'][0]->slide_text_tac_do!=''){
+        $asign['slide_text_tac_do']=$data['config'][0]->slide_text_tac_do;
+    }
+    $asign['slide_text_mau_chu']='color:red;';
+    if($data['config'][0]->slide_text_mau_chu!=''){
+        $asign['slide_text_mau_chu']='color:'.$data['config'][0]->slide_text_mau_chu.';';
+    }
+
+    $asign['slide_text_mau_nen']='background:#f0e9d0;';
+    if($data['config'][0]->slide_text_mau_nen!=''){
+        $asign['slide_text_mau_nen']='background:'.$data['config'][0]->slide_text_mau_nen.';';
+    }
+
+    $asign['slide_text_co_chu']='font-size: 20px;';
+    if($data['config'][0]->slide_text_co_chu!=''){
+        $asign['slide_text_co_chu']='font-size:'.$data['config'][0]->slide_text_co_chu.'px;';
+    }
+
     print_template($asign, 'menu');
 }

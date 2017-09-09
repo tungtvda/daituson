@@ -95,7 +95,7 @@
 
 
         </div>
-        <marquee class="slogan" scrolldelay="100" style="color:red; background:#f0e9d0;">
+        <marquee class="slogan" scrollamount="{slide_text_tac_do}" style="{slide_text_mau_chu} {slide_text_mau_nen} {slide_text_co_chu}">
             {slide_text}
         </marquee>
 
