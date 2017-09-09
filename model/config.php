@@ -1,7 +1,7 @@
 <?php
 class config
 {
-    public $Id,$banner,$icon,$name,$dien_thoai,$fax,$email,$tru_so,$giay_phep,$trach_nhiem_chinh,$trach_nhiem_noi_dung,$slide_text,$gioi_thieu,$title,$keyword,$description;
+    public $Id,$banner,$icon,$name,$dien_thoai,$fax,$email,$tru_so,$giay_phep,$trach_nhiem_chinh,$trach_nhiem_noi_dung,$slide_text,$slide_text_tac_do,$slide_text_mau_chu,$slide_text_mau_nen,$slide_text_co_chu,$gioi_thieu,$title,$keyword,$description;
     public function config($data=array())
     {
     $this->Id=isset($data['Id'])?$data['Id']:'';
@@ -16,6 +16,10 @@ class config
     $this->trach_nhiem_chinh=isset($data['trach_nhiem_chinh'])?$data['trach_nhiem_chinh']:'';
     $this->trach_nhiem_noi_dung=isset($data['trach_nhiem_noi_dung'])?$data['trach_nhiem_noi_dung']:'';
     $this->slide_text=isset($data['slide_text'])?$data['slide_text']:'';
+    $this->slide_text_tac_do=isset($data['slide_text_tac_do'])?$data['slide_text_tac_do']:'';
+    $this->slide_text_mau_chu=isset($data['slide_text_mau_chu'])?$data['slide_text_mau_chu']:'';
+    $this->slide_text_mau_nen=isset($data['slide_text_mau_nen'])?$data['slide_text_mau_nen']:'';
+    $this->slide_text_co_chu=isset($data['slide_text_co_chu'])?$data['slide_text_co_chu']:'';
     $this->gioi_thieu=isset($data['gioi_thieu'])?$data['gioi_thieu']:'';
     $this->title=isset($data['title'])?$data['title']:'';
     $this->keyword=isset($data['keyword'])?$data['keyword']:'';
@@ -36,6 +40,10 @@ class config
             $this->trach_nhiem_chinh=addslashes($this->trach_nhiem_chinh);
             $this->trach_nhiem_noi_dung=addslashes($this->trach_nhiem_noi_dung);
             $this->slide_text=addslashes($this->slide_text);
+            $this->slide_text_tac_do=addslashes($this->slide_text_tac_do);
+            $this->slide_text_mau_chu=addslashes($this->slide_text_mau_chu);
+            $this->slide_text_mau_nen=addslashes($this->slide_text_mau_nen);
+            $this->slide_text_co_chu=addslashes($this->slide_text_co_chu);
             $this->gioi_thieu=addslashes($this->gioi_thieu);
             $this->title=addslashes($this->title);
             $this->keyword=addslashes($this->keyword);
@@ -55,6 +63,10 @@ class config
             $this->trach_nhiem_chinh=stripslashes($this->trach_nhiem_chinh);
             $this->trach_nhiem_noi_dung=stripslashes($this->trach_nhiem_noi_dung);
             $this->slide_text=stripslashes($this->slide_text);
+            $this->slide_text_tac_do=stripslashes($this->slide_text_tac_do);
+            $this->slide_text_mau_chu=stripslashes($this->slide_text_mau_chu);
+            $this->slide_text_mau_nen=stripslashes($this->slide_text_mau_nen);
+            $this->slide_text_co_chu=stripslashes($this->slide_text_co_chu);
             $this->gioi_thieu=stripslashes($this->gioi_thieu);
             $this->title=stripslashes($this->title);
             $this->keyword=stripslashes($this->keyword);

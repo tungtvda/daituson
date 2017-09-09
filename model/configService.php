@@ -62,17 +62,17 @@ function config_getByPaging($CurrentPage, $PageSize,$Order,$where)
 //
 function config_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 {
-   return config_Get("SELECT config.Id, config.banner, config.icon, config.name, config.dien_thoai, config.fax, config.email, config.tru_so, config.giay_phep, config.trach_nhiem_chinh, config.trach_nhiem_noi_dung, config.slide_text, config.gioi_thieu, config.title, config.keyword, config.description FROM  config ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
+   return config_Get("SELECT config.Id, config.banner, config.icon, config.name, config.dien_thoai, config.fax, config.email, config.tru_so, config.giay_phep, config.trach_nhiem_chinh, config.trach_nhiem_noi_dung, config.slide_text, config.slide_text_tac_do, config.slide_text_mau_chu, config.slide_text_mau_nen, config.slide_text_co_chu, config.gioi_thieu, config.title, config.keyword, config.description FROM  config ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
 }
 //
 function config_insert($obj)
 {
-    return exe_query("insert into config (banner,icon,name,dien_thoai,fax,email,tru_so,giay_phep,trach_nhiem_chinh,trach_nhiem_noi_dung,slide_text,gioi_thieu,title,keyword,description) values ('$obj->banner','$obj->icon','$obj->name','$obj->dien_thoai','$obj->fax','$obj->email','$obj->tru_so','$obj->giay_phep','$obj->trach_nhiem_chinh','$obj->trach_nhiem_noi_dung','$obj->slide_text','$obj->gioi_thieu','$obj->title','$obj->keyword','$obj->description')",'config');
+    return exe_query("insert into config (banner,icon,name,dien_thoai,fax,email,tru_so,giay_phep,trach_nhiem_chinh,trach_nhiem_noi_dung,slide_text,slide_text_tac_do,slide_text_mau_chu,slide_text_mau_nen,slide_text_co_chu,gioi_thieu,title,keyword,description) values ('$obj->banner','$obj->icon','$obj->name','$obj->dien_thoai','$obj->fax','$obj->email','$obj->tru_so','$obj->giay_phep','$obj->trach_nhiem_chinh','$obj->trach_nhiem_noi_dung','$obj->slide_text','$obj->slide_text_tac_do','$obj->slide_text_mau_chu','$obj->slide_text_mau_nen','$obj->slide_text_co_chu','$obj->gioi_thieu','$obj->title','$obj->keyword','$obj->description')",'config');
 }
 //
 function config_update($obj)
 {
-    return exe_query("update config set banner='$obj->banner',icon='$obj->icon',name='$obj->name',dien_thoai='$obj->dien_thoai',fax='$obj->fax',email='$obj->email',tru_so='$obj->tru_so',giay_phep='$obj->giay_phep',trach_nhiem_chinh='$obj->trach_nhiem_chinh',trach_nhiem_noi_dung='$obj->trach_nhiem_noi_dung',slide_text='$obj->slide_text',gioi_thieu='$obj->gioi_thieu',title='$obj->title',keyword='$obj->keyword',description='$obj->description' where Id=$obj->Id",'config');
+    return exe_query("update config set banner='$obj->banner',icon='$obj->icon',name='$obj->name',dien_thoai='$obj->dien_thoai',fax='$obj->fax',email='$obj->email',tru_so='$obj->tru_so',giay_phep='$obj->giay_phep',trach_nhiem_chinh='$obj->trach_nhiem_chinh',trach_nhiem_noi_dung='$obj->trach_nhiem_noi_dung',slide_text='$obj->slide_text',slide_text_tac_do='$obj->slide_text_tac_do',slide_text_mau_chu='$obj->slide_text_mau_chu',slide_text_mau_nen='$obj->slide_text_mau_nen',slide_text_co_chu='$obj->slide_text_co_chu',gioi_thieu='$obj->gioi_thieu',title='$obj->title',keyword='$obj->keyword',description='$obj->description' where Id=$obj->Id",'config');
 }
 //
 function config_delete($obj)

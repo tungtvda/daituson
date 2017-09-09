@@ -19,12 +19,7 @@
         </div>
     </div>
 
-    <div class="left_all index_tour recommanded_tours" style="{tintuc_noi_bat_tong_hop_show}">
-        <h3 class="titlenews"><a href="{SITE-NAME}/{name_tonghop_url}/">{name_tonghop}</a></h3>
-        <div id="title_listhome">
-            {tintuc_noi_bat_tong_hop}
-        </div>
-    </div>
+
     <div class="left_all index_tour recommanded_tours" style="{tintuc_noi_bat_chinh_tri_show}">
         <h3 class="titlenews"><a href="{SITE-NAME}/{name_chinhtri_url}/">{name_chinhtri}</a></h3>
         <div id="title_listhome">
@@ -48,6 +43,12 @@
         <h3 class="titlenews"><a href="{SITE-NAME}/{name_anninh_url}/">{name_anninh}</a></h3>
         <div id="title_listhome">
             {tintuc_noi_bat_an_ninh}
+        </div>
+    </div>
+    <div class="left_all index_tour recommanded_tours" style="{tintuc_noi_bat_tong_hop_show}">
+        <h3 class="titlenews"><a href="{SITE-NAME}/{name_tonghop_url}/">{name_tonghop}</a></h3>
+        <div id="title_listhome">
+            {tintuc_noi_bat_tong_hop}
         </div>
     </div>
     <div class="week left_all index_tour recommanded_tours" style="{tintuc_noi_bat_hoat_dong_show}">
